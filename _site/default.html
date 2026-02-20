@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/style.scss" | relative_url }}">
+    {% feed_meta %}
+    {% if site.google_analytics %}
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ site.google_analytics }}');
+    </script>
+    {% endif %}
+    
+    <!-- MathJax for mathematical equations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a id="a-title" href="{{ '/' | relative_url }}">
+          <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        </a>
+        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
+        
+        <!-- Navigation Bar -->
+        <div class="nav-bar">
+          <a href="#get-started" class="nav-link">Get Started</a>
+          <a href="#sampling-tools" class="nav-link">Sampling Tools</a>
+          <a href="#examples" class="nav-link">Examples</a>
+          <a href="#generative-models" class="nav-link">Generative Models</a>
+          <a href="{{ site.github.repository_url }}" class="nav-link"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author | default: site.github.owner_name }}. 
+        Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+      </div>
+    </footer>
+
+    <!-- Smooth scrolling script -->
+    <script>
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          if(this.getAttribute('href').startsWith('#')) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if(targetElement) {
+              targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

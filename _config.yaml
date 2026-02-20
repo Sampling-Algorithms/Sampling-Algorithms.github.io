@@ -1,0 +1,64 @@
+title: "Sampling Algorithms Tutorial"
+description: "A comprehensive guide to sampling algorithms with interactive notebooks"
+baseurl: "/library-of-sampling-methods" # the subpath of your site
+url: "https://charles-kmc.github.io" # your GitHub Pages URL
+github_username: charles-kmc
+
+# Build settings
+theme: jekyll-theme-cayman
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+# Collections
+collections:
+  tutorials:
+    output: true
+    permalink: /:collection/:name
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Joel & Charlesquin"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Add this to your _config.yml
+collections:
+  start:
+    output: true
+    permalink: /start/:name/
+  tutorials:
+    output: true
+    permalink: /:collection/:name
+
+# Defaults for the new collection
+defaults:
+  - scope:
+      path: ""
+      type: "start"
+    values:
+      layout: "start-tutorial"
+      author: "Joel & Charlesquin"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Joel & Charlesquin"
+  - scope:
+      path: ""
+    values:
+      layout: "default"

@@ -1,0 +1,25 @@
+<h1 id="why-do-we-need-sampling">Why Do We Need Sampling?</h1>
+
+<p>Imagine you’re a baker trying to perfect your chocolate chip cookie recipe. You bake a batch and want to know: “Are the chips evenly distributed?” You could:</p>
+
+<ol>
+  <li><strong>Eat the whole batch</strong> (computationally expensive! 🍪)</li>
+  <li><strong>Take a few cookies as samples</strong> (much more efficient!)</li>
+</ol>
+
+<p>This is sampling in a nutshell: <strong>understanding the whole by examining a representative part</strong>.</p>
+
+<h2 id="-what-is-sampling">🎲 What is Sampling?</h2>
+
+<p>In computational terms, sampling means generating random values from a probability distribution. Instead of computing with the entire distribution (which might be impossible), we work with a set of samples.</p>
+
+<p>```python
+import numpy as np
+import matplotlib.pyplot as plt</p>
+
+<h1 id="generate-1000-samples-from-a-normal-distribution">Generate 1000 samples from a normal distribution</h1>
+<p>samples = np.random.normal(loc=0, scale=1, size=1000)</p>
+
+<p>plt.hist(samples, bins=30, density=True, alpha=0.7)
+plt.title(‘1000 Samples from N(0,1)’)
+plt.show()</p>

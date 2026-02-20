@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Home | Bank of Sampling Methods</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Home" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive guide to sampling algorithms with interactive notebooks" />
+<meta property="og:description" content="A comprehensive guide to sampling algorithms with interactive notebooks" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Bank of Sampling Methods" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Home" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"A comprehensive guide to sampling algorithms with interactive notebooks","headline":"Home","name":"Bank of Sampling Methods","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Home</h1>
+      <h2 class="project-tagline">A comprehensive guide to sampling algorithms with interactive notebooks</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="-sampling-algorithms-a-visual-tutorial-series">🎲 Sampling Algorithms: A Visual Tutorial Series</h1>
+
+<p>Welcome to my interactive tutorial series on <strong>sampling algorithms</strong>! Here you’ll find detailed explanations, visualizations, and runnable code for various sampling methods used in machine learning, Bayesian statistics, and generative AI.</p>
+
+<hr />
+
+<h2 id="get-started">🚀 Get Started</h2>
+
+<p>New to sampling? Start here with the fundamentals:</p>
+
+<div class="featured-grid">
+  <div class="featured-card">
+    <h3>🎯 What is Sampling?</h3>
+    <p>Understanding the basics: why we sample, what makes a good sample, and where sampling is used in modern computing.</p>
+    <a href="/sampling-algo-tutorials/2026/02/13/intro-to-sampling" class="btn">Start Learning →</a>
+  </div>
+  
+  <div class="featured-card">
+    <h3>📊 Probability Refresher</h3>
+    <p>Quick review of PDFs, CDFs, expectation, variance, and the fundamental theorem of simulation.</p>
+    <a href="#" class="btn">Review →</a>
+  </div>
+  
+  <div class="featured-card">
+    <h3>🛠️ Your First Sampler</h3>
+    <p>Build your first sampling algorithm from scratch in 10 minutes using only NumPy.</p>
+    <a href="#" class="btn btn-secondary">Try It →</a>
+  </div>
+</div>
+
+<h3 id="learning-path">Learning Path</h3>
+
+<div class="mermaid">
+graph LR
+    A[Start Here] --&gt; B[Basic Methods]
+    B --&gt; C[MCMC Methods]
+    C --&gt; D[Advanced Topics]
+    D --&gt; E[Generative Models]
+    
+    style A fill:#28a745,color:white
+    style B fill:#17a2b8,color:white
+    style C fill:#ffc107,color:black
+    style D fill:#dc3545,color:white
+    style E fill:#6f42c1,color:white
+</div>
+
+<hr />
+
+<h2 id="sampling-tools">🧰 Sampling Tools</h2>
+
+<p>A comprehensive toolkit of sampling algorithms, from basic to advanced:</p>
+
+<h3 id="basic-methods">Basic Methods</h3>
+
+<div class="tools-grid">
+  <div class="tool-card">
+    <h4>🎲 Inverse Transform</h4>
+    <p>The simplest approach when you have the CDF. Works for any 1D distribution.</p>
+    <div class="difficulty">★☆☆</div>
+    <a href="#" class="btn-small">Learn →</a>
+  </div>
+  
+  <div class="tool-card">
+    <h4>📦 Rejection Sampling</h4>
+    <p>Sample from any distribution using a simpler proposal distribution.</p>
+    <div class="difficulty">★★☆</div>
+    <a href="/sampling-algo-tutorials/2026/02/13/rejection-sampling" class="btn-small">Learn →</a>
+  </div>
+  
+  <div class="tool-card">
+    <h4>⚖️ Importance Sampling</h4>
+    <p>Weighted samples for expectation estimation. Great for rare events.</p>
+    <div class="difficulty">★★☆</div>
+    <a href="#" class="btn-small">Learn →</a>
+  </div>
+  
+  <div class="tool-card">
+    <h4>🎯 Adaptive Rejection</h4>
+    <p>Builds a better proposal as sampling progresses.</p>
+    <div class="difficulty">★★☆</div>
+    <a href="#" class="btn-small">Learn →</a>
+  </div>
+</div>
+
+<h3 id="markov-chain-monte-carlo-mcmc">Markov Chain Monte Carlo (MCMC)</h3>
+
+<div class="tools-grid">
+  <div class="tool-card">
+    <h4>🔄 Metropolis-Hastings</h4>
+    <p>The classic MCMC algorithm. The workhorse of Bayesian inference.</p>
+    <div class="difficulty">★★☆</div>
+    <a href="#" class="btn-small">Learn →</a>
+  </div>
+  
+  <div class="tool-card">
+    <h4>🔄 Gibbs Sampling</h4>
+    <p>Coordinate-wise MCMC. Perfect when conditionals are known.</p>
+    <div class="difficulty">★★★</div>
+    <a href="#" class="btn-small">Learn →</a>
+  </div>
+  
+  <div class="tool-card">
+    <h4>⚡ Hamiltonian MC</h4>
+    <p>Gradient-based efficient sampling for high dimensions.</p>
+    <div class="difficulty">★★★</div>
+    <a href="#" class="btn-small">Learn →</a>
+  </div>
+  
+  <div class="tool-card">
+    <h4>🏃‍♂️ Langevin Dynamics</h4>
+    <p>Combines gradient descent with noise for sampling.</p>
+    <div class="difficulty">★★★</div>
+    <a href="#" class="btn-small">Learn →</a>
+  </div>
+</div>
+
+<h3 id="advanced-methods">Advanced Methods</h3>
+
+<div class="tools-grid">
+  <div class="tool-card">
+    <h4>🍰 Slice Sampling</h4>
+    <p>Adaptive MCMC that requires no tuning parameters.</p>
+    <div class="difficulty">★★★</div>
+    <a href="#" class="btn-small">Learn →</a>
+  </div>
+  
+  <div class="tool-card">
+    <h4>🌡️ Parallel Tempering</h4>
+    <p>Better mixing for multimodal distributions using temperature swaps.</p>
+    <div class="difficulty">★★★★</div>
+    <a href="#" class="btn-small">Learn →</a>
+  </div>
+  
+  <div class="tool-card">
+    <h4>🔮 Sequential Monte Carlo</h4>
+    <p>Particle filtering for time series and dynamic systems.</p>
+    <div class="difficulty">★★★★</div>
+    <a href="#" class="btn-small">Learn →</a>
+  </div>
+  
+  <div class="tool-card">
+    <h4>🎭 Nested Sampling</h4>
+    <p>For Bayesian evidence calculation and multimodal problems.</p>
+    <div class="difficulty">★★★★</div>
+    <a href="#" class="btn-small">Learn →</a>
+  </div>
+</div>
+
+<hr />
+
+<h2 id="examples">💡 Examples</h2>
+
+<p>See sampling algorithms in action with real-world applications:</p>
+
+<div class="examples-grid">
+  <div class="example-card">
+    <div class="example-img">📈</div>
+    <h3>Bayesian Linear Regression</h3>
+    <p>Use MCMC to sample from posterior distributions of regression parameters. Includes uncertainty quantification.</p>
+    <div class="example-meta">
+      <span class="tag">Metropolis-Hastings</span>
+      <span class="tag">PyMC3</span>
+      <span class="tag">Regression</span>
+    </div>
+    <a href="#" class="btn-small">View Example →</a>
+  </div>
+  
+  <div class="example-card">
+    <div class="example-img">🧊</div>
+    <h3>Ising Model Simulation</h3>
+    <p>Sample spin configurations in statistical physics. Models magnetic materials and social networks.</p>
+    <div class="example-meta">
+      <span class="tag">Gibbs Sampling</span>
+      <span class="tag">Physics</span>
+      <span class="tag">2D Lattice</span>
+    </div>
+    <a href="#" class="btn-small">View Example →</a>
+  </div>
+  
+  <div class="example-card">
+    <div class="example-img">📉</div>
+    <h3>Option Pricing</h3>
+    <p>Monte Carlo simulation for financial derivatives. Price European and Asian options.</p>
+    <div class="example-meta">
+      <span class="tag">Monte Carlo</span>
+      <span class="tag">Finance</span>
+      <span class="tag">Black-Scholes</span>
+    </div>
+    <a href="#" class="btn-small">View Example →</a>
+  </div>
+  
+  <div class="example-card">
+    <div class="example-img">⛰️</div>
+    <h3>Simulated Annealing</h3>
+    <p>Global optimization using sampling techniques. Find the minimum of complex functions.</p>
+    <div class="example-meta">
+      <span class="tag">Optimization</span>
+      <span class="tag">Annealing</span>
+      <span class="tag">Global Optima</span>
+    </div>
+    <a href="#" class="btn-small">View Example →</a>
+  </div>
+  
+  <div class="example-card">
+    <div class="example-img">🧬</div>
+    <h3>Phylogenetic Inference</h3>
+    <p>Sample evolutionary trees using MCMC. Reconstruct species relationships.</p>
+    <div class="example-meta">
+      <span class="tag">MCMC</span>
+      <span class="tag">Biology</span>
+      <span class="tag">Evolution</span>
+    </div>
+    <a href="#" class="btn-small">View Example →</a>
+  </div>
+  
+  <div class="example-card">
+    <div class="example-img">🗺️</div>
+    <h3>SLAM for Robotics</h3>
+    <p>Simultaneous Localization and Mapping using particle filters.</p>
+    <div class="example-meta">
+      <span class="tag">Particle Filter</span>
+      <span class="tag">Robotics</span>
+      <span class="tag">SMC</span>
+    </div>
+    <a href="#" class="btn-small">View Example →</a>
+  </div>
+</div>
+
+<h3 id="interactive-demos">Interactive Demos</h3>
+
+<p>Try these live examples in your browser:</p>
+
+<ul>
+  <li><a href="notebooks/2d_distribution_explorer.ipynb">🎯 2D Distribution Explorer</a> - Visualize and sample from different 2D distributions</li>
+  <li><a href="notebooks/mcmc_animation.ipynb">🔄 MCMC Animation</a> - Watch the Markov chain explore the parameter space</li>
+  <li><a href="notebooks/acceptance_tuner.ipynb">📊 Acceptance Rate Tuner</a> - Find the optimal proposal scale for MH</li>
+  <li><a href="notebooks/temperature_scheduler.ipynb">🌡️ Temperature Scheduler</a> - Experiment with annealing schedules</li>
+</ul>
+
+<hr />
+
+<h2 id="generative-models">🧠 Generative Models</h2>
+
+<p>Explore how sampling powers modern generative AI:</p>
+
+<div class="genmodels-grid">
+  <div class="genmodel-card featured">
+    <h3>🎨 Variational Autoencoders (VAEs)</h3>
+    <p>Learn how VAEs use the reparameterization trick to sample from latent spaces and generate new data.</p>
+    <div class="key-concepts">
+      <span class="concept">Reparameterization</span>
+      <span class="concept">ELBO</span>
+      <span class="concept">Latent Variables</span>
+      <span class="concept">Encoder/Decoder</span>
+    </div>
+    <div class="progress">
+      <div class="progress-bar" style="width: 75%"></div>
+    </div>
+    <p><small>Tutorial 3 of 4 completed</small></p>
+    <a href="#" class="btn">Start Tutorial →</a>
+  </div>
+  
+  <div class="genmodel-card">
+    <h3>🌌 Generative Adversarial Networks</h3>
+    <p>Understanding the sampling process in GANs. How generators create fake data that fools discriminators.</p>
+    <div class="key-concepts">
+      <span class="concept">Adversarial Training</span>
+      <span class="concept">Generator</span>
+      <span class="concept">Discriminator</span>
+      <span class="concept">Nash Equilibrium</span>
+    </div>
+    <div class="status">Coming Soon</div>
+  </div>
+  
+  <div class="genmodel-card">
+    <h3>🔄 Normalizing Flows</h3>
+    <p>Invertible transformations for complex distributions. Exact likelihood computation and sampling.</p>
+    <div class="key-concepts">
+      <span class="concept">Change of Variables</span>
+      <span class="concept">Jacobian</span>
+      <span class="concept">Invertible NN</span>
+      <span class="concept">RealNVP</span>
+    </div>
+    <div class="status">Coming Soon</div>
+  </div>
+  
+  <div class="genmodel-card">
+    <h3>🧩 Diffusion Models</h3>
+    <p>Sampling by reversing a diffusion process. The technology behind DALL-E and Stable Diffusion.</p>
+    <div class="key-concepts">
+      <span class="concept">Denoising</span>
+      <span class="concept">Score Matching</span>
+      <span class="concept">Markov Chain</span>
+      <span class="concept">DDPM</span>
+    </div>
+    <div class="status">Coming Soon</div>
+  </div>
+  
+  <div class="genmodel-card">
+    <h3>🔮 Energy-Based Models</h3>
+    <p>Learn the energy function and sample using MCMC/Langevin dynamics.</p>
+    <div class="key-concepts">
+      <span class="concept">Energy Function</span>
+      <span class="concept">Langevin Dynamics</span>
+      <span class="concept">Contrastive Divergence</span>
+    </div>
+    <div class="status">Coming Soon</div>
+  </div>
+  
+  <div class="genmodel-card">
+    <h3>🎭 Boltzmann Machines</h3>
+    <p>Stochastic recurrent neural networks for unsupervised learning.</p>
+    <div class="key-concepts">
+      <span class="concept">Restricted BM</span>
+      <span class="concept">Gibbs Sampling</span>
+      <span class="concept">Hidden Units</span>
+    </div>
+    <div class="status">Coming Soon</div>
+  </div>
+</div>
+
+<h3 id="sampling-in-modern-ai">Sampling in Modern AI</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Model Type</th>
+      <th style="text-align: left">Sampling Method</th>
+      <th style="text-align: left">Use Case</th>
+      <th style="text-align: left">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>VAE</strong></td>
+      <td style="text-align: left">Reparameterization Trick</td>
+      <td style="text-align: left">Image generation</td>
+      <td style="text-align: left">Face generation</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>GAN</strong></td>
+      <td style="text-align: left">Latent space sampling</td>
+      <td style="text-align: left">Synthetic data</td>
+      <td style="text-align: left">Deepfakes</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Diffusion</strong></td>
+      <td style="text-align: left">Reverse process</td>
+      <td style="text-align: left">High-quality images</td>
+      <td style="text-align: left">DALL-E 2</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Normalizing Flow</strong></td>
+      <td style="text-align: left">Direct transform</td>
+      <td style="text-align: left">Density estimation</td>
+      <td style="text-align: left">Glow</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Energy-Based</strong></td>
+      <td style="text-align: left">MCMC (Langevin)</td>
+      <td style="text-align: left">Density learning</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-quick-reference">📊 Quick Reference</h2>
+
+<h3 id="algorithm-comparison">Algorithm Comparison</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Algorithm</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Dimension</th>
+      <th style="text-align: left">Acceptance</th>
+      <th style="text-align: left">Best For</th>
+      <th style="text-align: left">Implementation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>Inverse Transform</strong></td>
+      <td style="text-align: left">Direct</td>
+      <td style="text-align: left">1D</td>
+      <td style="text-align: left">100%</td>
+      <td style="text-align: left">Simple distributions</td>
+      <td style="text-align: left">Easy</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Rejection Sampling</strong></td>
+      <td style="text-align: left">Direct</td>
+      <td style="text-align: left">Low</td>
+      <td style="text-align: left">Variable</td>
+      <td style="text-align: left">Known PDFs</td>
+      <td style="text-align: left">Moderate</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Metropolis-Hastings</strong></td>
+      <td style="text-align: left">MCMC</td>
+      <td style="text-align: left">Medium</td>
+      <td style="text-align: left">~23%</td>
+      <td style="text-align: left">General purpose</td>
+      <td style="text-align: left">Easy</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Gibbs</strong></td>
+      <td style="text-align: left">MCMC</td>
+      <td style="text-align: left">High</td>
+      <td style="text-align: left">100%</td>
+      <td style="text-align: left">Conditional known</td>
+      <td style="text-align: left">Moderate</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>HMC</strong></td>
+      <td style="text-align: left">MCMC</td>
+      <td style="text-align: left">High</td>
+      <td style="text-align: left">~65%</td>
+      <td style="text-align: left">Differentiable models</td>
+      <td style="text-align: left">Complex</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>SMC</strong></td>
+      <td style="text-align: left">Sequential</td>
+      <td style="text-align: left">Dynamic</td>
+      <td style="text-align: left">N/A</td>
+      <td style="text-align: left">Time series</td>
+      <td style="text-align: left">Complex</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Slice Sampling</strong></td>
+      <td style="text-align: left">MCMC</td>
+      <td style="text-align: left">Medium</td>
+      <td style="text-align: left">Adaptive</td>
+      <td style="text-align: left">No tuning</td>
+      <td style="text-align: left">Moderate</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="when-to-use-what">When to Use What</h3>
+
+<p>```python
+def choose_sampler(problem):
+    “””
+    Helper function to choose the right sampling algorithm
+    “””
+    if problem[‘dimension’] == 1:
+        if problem.get(‘has_cdf’, False):
+            return “Inverse Transform Sampling”
+        else:
+            return “Rejection Sampling”</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>elif problem['dimension'] &lt;= 10:
+    if problem.get('multimodal', False):
+        return "Parallel Tempering"
+    else:
+        return "Metropolis-Hastings"
+
+else:  # High dimensional
+    if problem.get('has_gradients', False):
+        return "Hamiltonian Monte Carlo"
+    elif problem.get('conditionals_known', False):
+        return "Gibbs Sampling"
+    else:
+        return "Metropolis-Hastings with adaptive proposal"
+</code></pre></div></div>
+
+
+      <footer class="site-footer">
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

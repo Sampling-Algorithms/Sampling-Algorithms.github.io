@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% seo %}
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    
+    <!-- MathJax for equations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    {% feed_meta %}
+  </head>
+  <body>
+    <!-- Navigation Bar - This appears on EVERY page -->
+    <div class="top-nav">
+      <a href="{{ site.baseurl }}/" class="nav-link">Home</a>
+      <a href="{{ site.baseurl }}/start" class="nav-link">Start</a>
+      <a href="{{ site.baseurl }}/sampling-tools" class="nav-link">Sampling tools</a>
+      <a href="{{ site.baseurl }}/examples" class="nav-link">Examples</a>
+      <a href="{{ site.baseurl }}/projects" class="nav-link">Projects</a>
+    </div>
+
+    <!-- Main Content - This is where your page content goes -->
+    <main class="page-content">
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
+
+    <!-- Footer - This appears on EVERY page -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; {{ site.time | date: '%Y' }} Library of Sampling Methods</p>
+          <p>Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://pages.github.com/">GitHub Pages</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Global Styles -->
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Navigation Bar - Beautiful gradient background */
+      .top-nav {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        padding: 1.2rem 2rem;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+
+      .nav-link {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding: 0.6rem 1.5rem;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .nav-link::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.2);
+        transition: width 0.6s, height 0.6s;
+      }
+
+      .nav-link:hover::before {
+        width: 200px;
+        height: 200px;
+      }
+
+      .nav-link:hover {
+        transform: translateY(-2px);
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      }
+
+      /* Active page highlighting */
+      .nav-link.active {
+        background: rgba(255,255,255,0.2);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      }
+
+      /* Main content area */
+      .page-content {
+        min-height: calc(100vh - 200px);
+        padding: 2rem 0;
+      }
+
+      /* Footer with matching gradient */
+      .site-footer {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 2rem 0;
+        margin-top: 4rem;
+        text-align: center;
+        border-top: 1px solid rgba(255,255,255,0.1);
+      }
+
+      .footer-content p {
+        margin: 0.5rem 0;
+        opacity: 0.9;
+      }
+
+      .site-footer a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        border-bottom: 1px dotted rgba(255,255,255,0.5);
+      }
+
+      .site-footer a:hover {
+        opacity: 1;
+        border-bottom: 1px solid white;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .top-nav {
+          gap: 0.5rem;
+          padding: 1rem;
+          flex-wrap: wrap;
+        }
+        
+        .nav-link {
+          font-size: 0.9rem;
+          padding: 0.4rem 1rem;
+        }
+        
+        .page-content {
+          padding: 1rem 0;
+        }
+      }
+
+      /* Utility classes */
+      .text-center {
+        text-align: center;
+      }
+      
+      .mt-4 {
+        margin-top: 2rem;
+      }
+      
+      .mb-4 {
+        margin-bottom: 2rem;
+      }
+
+      /* Beautiful scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+      }
+    </style>
+
+    <!-- JavaScript for active link highlighting -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+          const linkPath = link.getAttribute('href');
+          
+          // Remove trailing slashes for comparison
+          const cleanCurrent = currentPath.replace(/\/$/, '');
+          const cleanLink = linkPath.replace(/\/$/, '');
+          
+          // Check if this link matches the current page
+          if (cleanCurrent === cleanLink || 
+              (cleanLink === '{{ site.baseurl }}' && cleanCurrent === '{{ site.baseurl }}') ||
+              (cleanLink === '{{ site.baseurl }}/' && cleanCurrent === '{{ site.baseurl }}')) {
+            link.classList.add('active');
+          }
+          
+          // Special case for home
+          if (cleanLink === '{{ site.baseurl }}/' && cleanCurrent === '{{ site.baseurl }}') {
+            link.classList.add('active');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
