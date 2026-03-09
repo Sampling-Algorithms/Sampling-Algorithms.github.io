@@ -19,7 +19,7 @@ The density $\pi$ of the distribution usually takes the form
 \end{equation}
 and 
 
-## Key Concepts
+## The difficulties 
 - Population vs Sample
 - Random Sampling
 - Bias and Variance
