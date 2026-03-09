@@ -24,6 +24,11 @@ At first, computing the integral look easier but several diffifculties may arise
 - The normalisation constant $\mathcal{Z}$ is unknown
 - The variable $x$ is high-dimensional  
 - Evaluating $\pi$ in the Bayesian setting is hard especially when it depends on a large number of data. 
--
+
+## What you will learn in this library 
+
+
+
+
 
 [Continue Reading...](#)
