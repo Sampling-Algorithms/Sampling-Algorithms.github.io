@@ -11,7 +11,13 @@ Sampling algorithms play an important role in various fields, including machine 
 \begin{equation}\label{problem}
    \pi(f) := \int_{\mathcal{M}} f(x) \pi(x){d}x,
 \end{equation}
-where $f: \mathcal{M} \rightarrow \mathbb{R}$ is a real-valued integrable function with respect to the probability distribution $\pi$ which is assumed to admit a density (still denoted by $\pi$ for convenience) with respect to the Lebesgue measure. The support $\mathcal{M}$ of the distribution can either be the entire space $\mathbb{R}^d$ or a proper subset of $\mathbb{R}^d$ where $d$ denotes the dimensionality of the problem. 
+where $f: \mathcal{M} \rightarrow \mathbb{R}$ is a real-valued integrable function with respect to the probability distribution $\pi$ which is assumed to admit a density (still denoted by $\pi$ for convenience) with respect to the Lebesgue measure. The support $\mathcal{M}$ of the distribution can either be the entire space $\mathbb{R}^d$ or a proper subset of $\mathbb{R}^d$ where $d$ denotes the dimensionality of the problem.  
+
+The density $\pi$ of the distribution usually takes the form 
+\begin{equation}
+  \pi(x) = \frac{1}{\mathcal{Z}} e^{-U(x)}, \quad x \in \mathcal{M}
+\end{equation}
+and 
 
 ## Key Concepts
 - Population vs Sample
