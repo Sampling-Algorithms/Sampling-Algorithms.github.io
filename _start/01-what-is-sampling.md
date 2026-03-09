@@ -20,9 +20,10 @@ The density $\pi$ of the distribution usually takes the form
 and the potential function $U$ is defined from $\mathcal{M}$ to $\mathbb{R}_+$
 
 ## The difficulties 
-- Population vs Sample
-- Random Sampling
-- Bias and Variance
-- Law of Large Numbers
+At first, computing the integral look easier but several diffifculties may arise 
+- The normalisation constant $\mathcal{Z}$ is unknown
+- The variable $x$ is high-dimensional  
+- Evaluating $\pi$ in the Bayesian setting is hard especially when it depends on a large number of data. 
+-
 
 [Continue Reading...](#)
