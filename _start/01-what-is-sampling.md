@@ -17,7 +17,7 @@ The density $\pi$ of the distribution usually takes the form
 \begin{equation}
   \pi(x) = \frac{1}{\mathcal{Z}} e^{-U(x)}, \quad x \in \mathcal{M}
 \end{equation}
-and 
+and the potential function $U$ is defined from $\mathcal{M}$ to $\mathbb{R}_+$
 
 ## The difficulties 
 - Population vs Sample
