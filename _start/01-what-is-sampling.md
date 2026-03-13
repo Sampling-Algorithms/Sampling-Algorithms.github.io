@@ -30,6 +30,14 @@ At first, computing the integral $\pi(f)$ look easier but several diffifculties 
 - Evaluating $\pi$ in the Bayesian setting is hard especially when it depends on a large number of data. 
 
 ## What you will learn in this library 
+This library is intended to present a range of algorithms design to tackle/find an approximation of $\pi(f)$. Exact and approximate samples will be presented both for unconstrained (when $\mathcal{M} = \mathbb{R}^d$) and constrained (when $\mathcal{M} \subset \mathbb{R}^d$) sampling problems. For each method, simple examples are provided for a clear understanding of the method accompanied with project to strengthened the knowledge. The methods we present are accompanied with appropriate references. 
+
+## A sample of methods discussed 
+Some of the methods we will discussed include 
+- Approximate samplers (ULA, SGLD, Unadjusted HMC (UHMC), Proximal Unadjusted Langevin (P-ULA), MYULA, FBULA, Tamed ULA (T-ULA), BAOB/ABOBA/OBABO splitting approaches, Generalised Langevin (GLE) integrators, Projected/Mirror descent Langevin, Stein Variational Gradient descent, Interacting ULA methods, Affine Invariant Interacting Langevin methods, Birth-Death Accelerated Langevin).  
+-  Exact samplers (Random Walk Metropolis Hasting (RWM), MALA, HMC, ZZS, BPS, Boomerang sampler, coordinate sampler, Gibbs sampler, Metropolis Within-Gibbs, Preconditioned/Manifold MALA, RJMCMC, Pseudo Marginal MH, Exchange algorithms, Slice sampling, Population MCMC, Affine Invariant sampler, (Importance sampling)).
+
+We equally discuss subsampling techniques to tackle the big data setting in Bayesian computation for example. 
 
 
 
