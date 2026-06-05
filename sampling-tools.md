@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Sampling Tools
+hero_subtitle: Algorithm Library
+hero_description: Browse a comprehensive collection of sampling algorithms, from foundational methods to advanced MCMC techniques.
 ---
 
 <!-- Navigation Bar -->

@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<article class="post-layout">
+	{{ content }}
+</article>
+
+<style>
+	.post-layout {
+		max-width: 800px;
+		margin: 2rem auto 0;
+		padding: 2rem;
+		background: var(--page-bg-alt);
+		border-radius: 20px;
+		box-shadow: 0 8px 32px rgba(58, 143, 183, 0.12);
+	}
+
+	.post-layout h1,
+	.post-layout h2,
+	.post-layout h3 {
+		color: var(--text-primary);
+	}
+
+	.post-layout p,
+	.post-layout li {
+		color: var(--text-secondary);
+	}
+
+	@media (max-width: 768px) {
+		.post-layout {
+			border-radius: 0;
+			margin-top: 0;
+			padding: 1.25rem;
+		}
+	}
+</style>

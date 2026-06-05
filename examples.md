@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Examples
+hero_subtitle: Applied Sampling Case Studies
+hero_description: Explore real-world applications of sampling algorithms across statistics, optimization, and scientific computing.
 ---
 
 <!-- Navigation Bar -->

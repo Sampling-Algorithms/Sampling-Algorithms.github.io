@@ -1,203 +1,186 @@
 ---
 layout: default
 title: Home
+hero_title: Vision Maths Lab
+hero_subtitle: Library of Sampling Methods
+hero_description: We develop and study sampling methods for machine learning, Bayesian inference, and computational science.
 ---
-<!-- <div class="welcome-section" style="background-image: url('{{ site.baseurl }}/assets/images/background.png');"> -->
-<!-- <div class="welcome-section" style="background-image: url('{{ site.baseurl }}/assets/images/logo2.jpg');"> -->
-<div class="welcome-section" id="welcome-section">
-  <div class="welcome-overlay">
-    <div class="container">
-      <h2>Welcome to the Vision Maths Lab</h2>
-      <p>We develop and study sampling methods for machine learning, Bayesian inference, and computational science.</p>
-    </div>
-  </div>
+<div class="poster-container">
+  <main class="main-content">
+    <section class="section">
+      <h2 class="section-title">Quick Links</h2>
+      <div class="flow">
+        <a href="{{ site.baseurl }}/start" class="flow-step">🚀 Start Tutorial</a>
+        <div class="flow-arrow">↓</div>
+        <a href="{{ site.baseurl }}/sampling-tools" class="flow-step">🔧 Sampling Tools</a>
+        <div class="flow-arrow">↓</div>
+        <a href="{{ site.baseurl }}/examples" class="flow-step">💡 Examples</a>
+        <div class="flow-arrow">↓</div>
+        <a href="{{ site.baseurl }}/projects" class="flow-step">📚 Projects</a>
+      </div>
+    </section>
 
-  <div class="quick-links">
-    <a href="{{ site.baseurl }}/start" class="quick-link">
-      <span class="quick-icon">🚀</span>
-      <span>Get Started</span>
-    </a>
-    <a href="{{ site.baseurl }}/sampling-tools" class="quick-link">
-      <span class="quick-icon">🔧</span>
-      <span>Sampling Tools</span>
-    </a>
-    <a href="{{ site.baseurl }}/examples" class="quick-link">
-      <span class="quick-icon">💡</span>
-      <span>Examples</span>
-    </a>
-    <a href="{{ site.baseurl }}/projects" class="quick-link">
-      <span class="quick-icon">📚</span>
-      <span>Projects</span>
-    </a>
-  </div>
+    <section class="section">
+      <h2 class="section-title">Latest Tutorials</h2>
+      <div class="latest-list">
+        {% for post in site.posts limit:5 %}
+        <article class="post-item">
+          <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+          <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+          <p class="section-text">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Website Snapshot</h2>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Starter Lessons</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">{{ site.posts | size }}</div>
+          <div class="stat-label">Published Tutorials</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">4</div>
+          <div class="stat-label">Core Sections</div>
+        </div>
+      </div>
+    </section>
+  </main>
 </div>
 
-
-<!-- Latest Tutorials -->
-<div class="latest-tutorials">
-  <h2>📖 Latest Tutorials</h2>
-  <div class="tutorial-preview">
-    {% for post in site.posts limit:5 %}
-    <div class="preview-card">
-      <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-      <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
-      <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More →</a>
-    </div>
-    {% endfor %}
-  </div>
-</div>
-
-<!-- Add the CSS styles (same as before) -->
 <style>
-/* Remove default browser spacing */
-body {
-  margin: 0;
-  padding: 0;
-}
-
-/* Welcome section flush with navbar */
-.welcome-section {
-  text-align: center;
-  width: 100%;
-  margin: 0;           
-  padding-top: 20px;   
-  padding-bottom: 50px;
-}
-
-/* Headings inside welcome section */
-.welcome-section h2 {
-  font-size: 2rem;
-  color: #fcfcfc;
-  margin-top: 0;       
-  margin-bottom: 1rem;
-}
-
-.welcome-section p {
-  color: #fcfcfc;
-  font-size: 1.2rem;
-  margin-top: 0;
-  margin-bottom: 2rem;
-}
-
-/* Quick links row */
-.quick-links {
-  display: flex;           
-  justify-content: center; 
-  gap: 20px;               
-  flex-wrap: nowrap;      
-  margin-top: 60px;        /
-  align-items: center;
-}
-
-/* Individual quick links */
-.quick-link {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 15px;
-  background: rgba(78, 75, 75, 0.5);
-  border-radius: 8px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.quick-link:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-  background: #667eea;
-}
-
-/* Quick icons */
-.quick-icon {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Latest tutorials section */
-.latest-tutorials {
-  margin: 4rem 0;
-}
-
-.latest-tutorials h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-/* Grid for tutorial previews */
-.tutorial-preview {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-/* Preview cards */
-.preview-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  border: 1px solid #f0f0f0;
-}
-
-.preview-card h3 {
-  margin-bottom: 0.5rem;
-}
-
-.preview-card h3 a {
-  color: #667eea;
-  text-decoration: none;
-}
-
-.post-meta {
-  color: #999;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
-
-.read-more {
-  display: inline-block;
-  margin-top: 1rem;
-  color: #667eea;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .quick-links {
-    gap: 1rem;
+  .poster-container {
+    max-width: 700px;
+    margin: 32px auto 0;
+    background: var(--page-bg-alt);
+    border-radius: 28px;
+    box-shadow: 0 8px 32px rgba(58, 143, 183, 0.12);
+    overflow: hidden;
   }
-  .quick-link {
-    min-width: 120px;
-    padding: 1rem;
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 28px;
   }
-}
+
+  .section {
+    padding: 22px 24px;
+    background: var(--accent-bg);
+    border-radius: 22px;
+  }
+
+  .section-title {
+    margin: 0 0 12px;
+    border: 0;
+    color: var(--text-primary);
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  .section-text {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .flow {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .flow-step {
+    padding: 13px 15px;
+    background: var(--page-bg-alt);
+    border: 1px solid var(--brand);
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text-primary);
+  }
+
+  .flow-step:hover {
+    color: var(--brand);
+  }
+
+  .flow-arrow {
+    color: var(--brand);
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .latest-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .post-item {
+    padding: 14px;
+    background: var(--page-bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+
+  .post-item h3 {
+    margin: 0 0 6px;
+    color: var(--text-primary);
+  }
+
+  .post-item h3 a {
+    text-decoration: none;
+    color: var(--accent);
+  }
+
+  .post-meta {
+    margin: 0 0 8px;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 14px;
+  }
+
+  .stat-card {
+    padding: 18px 14px;
+    background: var(--page-bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    text-align: center;
+  }
+
+  .stat-number {
+    color: var(--accent);
+    font-size: 28px;
+    font-weight: 800;
+  }
+
+  .stat-label {
+    margin-top: 6px;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+
+  @media (max-width: 600px) {
+    .poster-container {
+      margin-top: 0;
+      border-radius: 0;
+    }
+
+    .main-content {
+      padding: 20px;
+    }
+  }
 </style>
-
-<!-- Javascript -->
-<script>
-  const welcomeSection = document.getElementById('welcome-section');
-
-  const backgrounds = [
-    "{{ site.baseurl }}/assets/images/logo.jpg",
-    "{{ site.baseurl }}/assets/images/logo1.jpg",
-    "{{ site.baseurl }}/assets/images/logo2.jpg",
-    "{{ site.baseurl }}/assets/images/background.png"
-  ];
-
-  let current = 0;
-
-  // Set initial background
-  welcomeSection.style.backgroundImage = `url('${backgrounds[current]}')`;
-
-  // Change background every 1 minute
-  setInterval(() => {
-    current = (current + 1) % backgrounds.length;
-    welcomeSection.style.backgroundImage = `url('${backgrounds[current]}')`;
-  }, 5000);
-</script>
