@@ -57,7 +57,7 @@ hero_description: We develop and study sampling methods for machine learning, Ba
   .poster-container {
     max-width: 700px;
     margin: 32px auto 0;
-    background: var(--page-bg-alt);
+    background: var(--page-bg);
     border-radius: 28px;
     box-shadow: 0 8px 32px rgba(58, 143, 183, 0.12);
     overflow: hidden;
@@ -98,7 +98,7 @@ hero_description: We develop and study sampling methods for machine learning, Ba
 
   .flow-step {
     padding: 13px 15px;
-    background: var(--page-bg-alt);
+    background: var(--page-bg);
     border: 1px solid var(--brand);
     border-radius: 10px;
     font-weight: 600;
@@ -126,7 +126,7 @@ hero_description: We develop and study sampling methods for machine learning, Ba
 
   .post-item {
     padding: 14px;
-    background: var(--page-bg-alt);
+    background: var(--page-bg);
     border: 1px solid var(--border);
     border-radius: 12px;
   }
@@ -155,7 +155,7 @@ hero_description: We develop and study sampling methods for machine learning, Ba
 
   .stat-card {
     padding: 18px 14px;
-    background: var(--page-bg-alt);
+    background: var(--page-bg);
     border: 1px solid var(--border);
     border-radius: 16px;
     text-align: center;
