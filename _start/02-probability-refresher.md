@@ -16,12 +16,12 @@ Probability allows us to quantify uncertainty and make principled decisions base
 
 For example:
 
-\begin{itemize}
-\item What is the probability that it will rain tomorrow?
-\item What is the true image behind a blurry observation?
-\item What is the probability that a patient has a disease given a medical test result?
-\item What is the most likely position of a robot given noisy sensor measurements?
-\end{itemize}
+<ul>
+    <li>What is the probability that it will rain tomorrow?</li>
+    <li>What is the true image behind a blurry observation?</li>
+    <li>What is the probability that a patient has a disease given a medical test result?</li>
+    <li>What is the most likely position of a robot given noisy sensor measurements?</li>
+</ul>
 
 All these questions can be formulated using probability distributions.
 
@@ -39,11 +39,11 @@ $$
 (\Omega, \mathcal{F}, \mathbb{P})
 $$
 
-\begin{itemize}
-\item $\Omega$: sample space
-\item $\mathcal{F}$: events (a $\sigma$-algebra)
-\item $\mathbb{P}$: probability measure
-\end{itemize}
+<ul>
+    <li>$\Omega$: sample space</li>
+    <li>$\mathcal{F}$: events (a $\sigma$-algebra)</li>
+    <li>$\mathbb{P}$: probability measure</li>
+</ul>
 
 ### Law of total probability
 
@@ -118,10 +118,10 @@ Suppose we toss a fair coin.
 Before observing the result, there is uncertainty.
 
 The coin can land on:
-\begin{itemize}
-    \item Heads
-    \item Tails
-\end{itemize}
+<ul>
+    <li>Heads</li>
+    <li>Tails</li>
+</ul>
 
 We therefore assign probabilities:
 
@@ -667,18 +667,18 @@ $$
 
 This simple idea forms the foundation of:
 
-\begin{itemize}
-\item Monte Carlo Methods
-\item Importance Sampling
-\item Rejection Sampling
-\item Markov Chain Monte Carlo (MCMC)
-\item Gibbs Sampling
-\item Metropolis-Hastings
-\item Langevin Dynamics
-\item Hamiltonian Monte Carlo
-\item Diffusion Models
-\item Bayesian Inference
-\end{itemize}
+<ul>
+    <li>Monte Carlo Methods</li>
+    <li>Importance Sampling</li>
+    <li>Rejection Sampling</li>
+    <li>Markov Chain Monte Carlo (MCMC)</li>
+    <li>Gibbs Sampling</li>
+    <li>Metropolis-Hastings</li>
+    <li>Langevin Dynamics</li>
+    <li>Hamiltonian Monte Carlo</li>
+    <li>Diffusion Models</li>
+    <li>Bayesian Inference</li>
+</ul>
 
 Everything that follows in this library builds upon these probabilistic concepts.
 
@@ -688,16 +688,16 @@ Everything that follows in this library builds upon these probabilistic concepts
 
 After completing this chapter, you should understand:
 
-\begin{itemize}
-\item ✓ What random variables represent
-\item ✓ The difference between PMFs and PDFs
-\item ✓ How probabilities are computed using density functions
-\item ✓ The meaning of cumulative distribution functions
-\item ✓ How expectation and variance characterize distributions
-\item ✓ The role of joint, marginal, and conditional probabilities
-\item ✓ How Bayes' rule updates uncertainty
-\item ✓ Why probability theory is the mathematical foundation of sampling methods
-\end{itemize}
+<ul>
+    <li>✓ What random variables represent</li>
+    <li>✓ The difference between PMFs and PDFs</li>
+    <li>✓ How probabilities are computed using density functions</li>
+    <li>✓ The meaning of cumulative distribution functions</li>
+    <li>✓ How expectation and variance characterize distributions</li>
+    <li>✓ The role of joint, marginal, and conditional probabilities</li>
+    <li>✓ How Bayes' rule updates uncertainty</li>
+    <li>✓ Why probability theory is the mathematical foundation of sampling methods</li>
+</ul>
 
 
 
