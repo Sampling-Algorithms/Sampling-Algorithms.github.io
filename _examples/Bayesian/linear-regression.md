@@ -68,6 +68,12 @@ plt.show()
 - Noise scale estimate from posterior of `sigma`
 - Posterior predictive interval on a test grid
 
+## Notebook access
+
+- Download notebook: [bayesian-linear-regression.ipynb]({{ site.baseurl }}/notebooks/bayesian-linear-regression.ipynb)
+- Open in Colab: [Launch Colab](https://colab.research.google.com/github/Sampling-Algorithms/Sampling-Algorithms.github.io/blob/main/notebooks/bayesian-linear-regression.ipynb)
+- View source on GitHub: [Notebook source](https://github.com/Sampling-Algorithms/Sampling-Algorithms.github.io/blob/main/notebooks/bayesian-linear-regression.ipynb)
+
 ## Why this is useful
 
 A Bayesian model answers both:
