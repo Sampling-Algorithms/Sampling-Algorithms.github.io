@@ -23,7 +23,7 @@
     <div class="top-nav">
       <div class="top-nav-content">
         <a class="top-nav-logo" href="{{ site.baseurl }}/">
-          <img src="{{ '/assets/images/vm.ico.png' | relative_url }}" alt="Library of Sampling Methods Logo" width="32" height="32">
+          <img src="{{ '/assets/images/vm.ico' | relative_url }}" alt="Library of Sampling Methods Logo" width="32" height="32">
         </a>
         <div class="top-nav-links">
           <a href="{{ site.baseurl }}/" class="nav-link">Home</a>
@@ -128,7 +128,7 @@
       }
 
       .container {
-        max-width: 960px;
+        max-width: 1120px;
         margin: 0 auto;
         padding: 0 24px;
       }
@@ -152,7 +152,7 @@
         }
       .top-nav-content {
             width: 100%;
-        max-width: 1200px;
+          max-width: none;
             height: 100%;
 
             margin: 0 auto;
@@ -175,7 +175,9 @@
       .top-nav-links {
             display: flex;
             align-items: center;
-          gap: 24px;
+            margin-left: auto;
+            justify-content: flex-end;
+            gap: 24px;
         }
 
       .top-nav-links a {

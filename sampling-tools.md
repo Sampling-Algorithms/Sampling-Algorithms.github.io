@@ -23,7 +23,7 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
   <h2>Basic Methods</h2>
   <div class="tools-grid">
     <div class="tool-card">
-      <h3>🎲 Inverse Transform</h3>
+      <h3>Inverse Transform</h3>
       <p>The simplest approach when you have the CDF. Works for any 1D distribution.</p>
       <div class="tool-meta">
         <span class="difficulty">★☆☆</span>
@@ -33,7 +33,7 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
     </div>
     
     <div class="tool-card">
-      <h3>📦 Rejection Sampling</h3>
+      <h3>Rejection Sampling</h3>
       <p>Sample from any distribution using a simpler proposal distribution.</p>
       <div class="tool-meta">
         <span class="difficulty">★★☆</span>
@@ -43,7 +43,7 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
     </div>
     
     <div class="tool-card">
-      <h3>⚖️ Importance Sampling</h3>
+      <h3>Importance Sampling</h3>
       <p>Weighted samples for expectation estimation. Great for rare events.</p>
       <div class="tool-meta">
         <span class="difficulty">★★☆</span>
@@ -58,7 +58,7 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
   <h2>Markov Chain Monte Carlo (MCMC)</h2>
   <div class="tools-grid">
     <div class="tool-card">
-      <h3>🔄 Metropolis-Hastings</h3>
+      <h3>Metropolis-Hastings</h3>
       <p>The classic MCMC algorithm. The workhorse of Bayesian inference.</p>
       <div class="tool-meta">
         <span class="difficulty">★★☆</span>
@@ -128,20 +128,22 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
 /* Add the styles - combining previous styles with new ones */
 .tools-category {
   margin: 3rem 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .tools-category h2 {
   color: #333;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #667eea;
-  font-family: "Roboto", sans-serif
+  border-bottom: 0px solid #667eea;
+  font-family: "Roboto", sans-serif;
 }
 
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .tool-card {
@@ -150,6 +152,7 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+  font-family: "Roboto", sans-serif;
 }
 
 .tool-card:hover {
@@ -158,12 +161,12 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
 }
 
 .tool-card h3 {
-  color: #667eea;
+  color: #000000;
   margin-bottom: 1rem;
 }
 
 .tool-card p {
-  color: #666;
+  color: #000000;
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
@@ -190,13 +193,13 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
 }
 
 .tool-link {
-  color: #667eea;
+  color: #1120f5;
   text-decoration: none;
   font-weight: 500;
 }
 
 .active {
-  color: #667eea;
+  color: #1120f5;
   font-weight: 600;
 }
 </style>
