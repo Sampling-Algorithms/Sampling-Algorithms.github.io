@@ -6,26 +6,77 @@ categories: [get-started, basics]
 math: true
 ---
 
-# Why Do We Need Sampling?
+# Why do we need sampling?
 
-Imagine you're a baker trying to perfect your chocolate chip cookie recipe. You bake a batch and want to know: "Are the chips evenly distributed?" You could:
+Many modern problems require expectations of the form
 
-1. **Eat the whole batch** (computationally expensive! 🍪)
-2. **Take a few cookies as samples** (much more efficient!)
+$$
+\pi(f)=\int f(x)\pi(x)dx
+$$
 
-This is sampling in a nutshell: **understanding the whole by examining a representative part**.
+where $\pi$ can be high-dimensional or only known up to a constant. Direct integration is often impossible, so we estimate expectations using samples.
 
-## 🎲 What is Sampling?
+## Intuition
 
-In computational terms, sampling means generating random values from a probability distribution. Instead of computing with the entire distribution (which might be impossible), we work with a set of samples.
+Instead of evaluating every possible state, we draw representative random states and average:
+
+$$
+\hat{\pi}_N(f)=\frac1N\sum_{i=1}^N f(x_i)
+$$
+
+As $N$ grows, this approximation becomes more accurate under standard conditions.
+
+## A tiny example
 
 ```python
 import numpy as np
-import matplotlib.pyplot as plt
 
-# Generate 1000 samples from a normal distribution
-samples = np.random.normal(loc=0, scale=1, size=1000)
+# Estimate E[X^2] for X ~ N(0,1)
+N = 10000
+x = np.random.normal(0, 1, size=N)
+estimate = np.mean(x**2)
+print("Estimated E[X^2]:", estimate)  # should be close to 1
+```
 
-plt.hist(samples, bins=30, density=True, alpha=0.7)
-plt.title('1000 Samples from N(0,1)')
-plt.show()
+## Where sampling appears
+
+- Bayesian inference (posterior uncertainty)
+- Machine learning (stochastic optimization and probabilistic models)
+- Statistical physics (state-space exploration)
+- Signal and image processing (inverse problems)
+- Robotics and control (state estimation under noise)
+
+## Common families of samplers
+
+1. **Direct methods**: inverse transform, rejection sampling
+2. **MCMC methods**: Metropolis-Hastings, Gibbs, HMC
+3. **Sequential methods**: particle filtering / SMC
+4. **PDMP methods**: Zig-Zag, Bouncy Particle Sampler
+
+## What makes sampling difficult
+
+- Unknown normalizing constants
+- High dimensional geometry
+- Correlated samples (in MCMC)
+- Poor tuning can slow convergence
+
+## Practical checklist
+
+Before trusting estimates, always check:
+
+- trace plots and stationarity
+- autocorrelation and effective sample size
+- acceptance rate (for MCMC)
+- sensitivity to initialization
+
+## Next steps
+
+If you are starting out, follow this order:
+
+1. What is sampling?
+2. Probability refresher
+3. Your first sampler
+4. Basic methods
+5. Zig-Zag sampler
+
+Continue from [Get Started]({{ site.baseurl }}/start).

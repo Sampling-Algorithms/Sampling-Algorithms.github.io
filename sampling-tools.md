@@ -29,7 +29,7 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
         <span class="difficulty">★☆☆</span>
         <span class="type">Direct</span>
       </div>
-      <a href="#" class="tool-link">Learn More →</a>
+      <a href="{{ site.baseurl }}/start/03-first-sampler/" class="tool-link">Learn More →</a>
     </div>
     
     <div class="tool-card">
@@ -49,7 +49,7 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
         <span class="difficulty">★★☆</span>
         <span class="type">Direct</span>
       </div>
-      <a href="#" class="tool-link">Learn More →</a>
+      <a href="{{ site.baseurl }}/start/04-basic-methods/" class="tool-link">Learn More →</a>
     </div>
   </div>
 </div>
@@ -64,7 +64,7 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
         <span class="difficulty">★★☆</span>
         <span class="type">MCMC</span>
       </div>
-      <a href="#" class="tool-link">Learn More →</a>
+      <a href="{{ site.baseurl }}/_examples/Statistics/linear-regression" class="tool-link">Learn More →</a>
     </div>
     
     <div class="tool-card">
@@ -74,7 +74,7 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
         <span class="difficulty">★★★</span>
         <span class="type">MCMC</span>
       </div>
-      <a href="#" class="tool-link">Learn More →</a>
+      <a href="{{ site.baseurl }}/2026/02/13/intro-to-sampling.html" class="tool-link">Learn More →</a>
     </div>
     
     <div class="tool-card">
@@ -84,7 +84,7 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
         <span class="difficulty">★★★</span>
         <span class="type">MCMC</span>
       </div>
-      <a href="#" class="tool-link">Learn More →</a>
+      <a href="{{ site.baseurl }}/examples" class="tool-link">Learn More →</a>
     </div>
   </div>
 </div>
@@ -99,7 +99,7 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
         <span class="difficulty">★★★</span>
         <span class="type">MCMC</span>
       </div>
-      <a href="#" class="tool-link">Learn More →</a>
+      <a href="{{ site.baseurl }}/examples" class="tool-link">Learn More →</a>
     </div>
     
     <div class="tool-card">
@@ -109,7 +109,7 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
         <span class="difficulty">★★★★</span>
         <span class="type">MCMC</span>
       </div>
-      <a href="#" class="tool-link">Learn More →</a>
+      <a href="{{ site.baseurl }}/start/05-ZigZag-sampler/" class="tool-link">Learn More →</a>
     </div>
     
     <div class="tool-card">
@@ -119,7 +119,7 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
         <span class="difficulty">★★★★</span>
         <span class="type">SMC</span>
       </div>
-      <a href="#" class="tool-link">Learn More →</a>
+      <a href="{{ site.baseurl }}/projects" class="tool-link">Learn More →</a>
     </div>
   </div>
 </div>

@@ -30,8 +30,8 @@ hero_description: Explore real-world applications of sampling algorithms across 
       <span class="badge">Intermediate</span>
     </div>
     <div class="example-links">
-      <a href="#" class="example-button">View Tutorial</a>
-      <a href="#" class="example-button secondary">Run in Colab</a>
+      <a href="{{ site.baseurl }}/_examples/Bayesian/linear-regression" class="example-button">View Tutorial</a>
+      <a href="{{ site.baseurl }}/_examples/Bayesian/linear-regression" class="example-button secondary">Read Details</a>
     </div>
   </div>
   
@@ -45,8 +45,8 @@ hero_description: Explore real-world applications of sampling algorithms across 
       <span class="badge">Advanced</span>
     </div>
     <div class="example-links">
-      <a href="#" class="example-button">View Tutorial</a>
-      <a href="#" class="example-button secondary">Run in Colab</a>
+      <a href="{{ site.baseurl }}/_examples/Statistics/linear-regression" class="example-button">View Tutorial</a>
+      <a href="{{ site.baseurl }}/_examples/Statistics/linear-regression" class="example-button secondary">Read Details</a>
     </div>
   </div>
   
@@ -60,8 +60,8 @@ hero_description: Explore real-world applications of sampling algorithms across 
       <span class="badge">Beginner</span>
     </div>
     <div class="example-links">
-      <a href="#" class="example-button">View Tutorial</a>
-      <a href="#" class="example-button secondary">Run in Colab</a>
+      <a href="{{ site.baseurl }}/_examples/Statistics/linear-regression" class="example-button">View Tutorial</a>
+      <a href="{{ site.baseurl }}/_examples/Statistics/linear-regression" class="example-button secondary">Read Details</a>
     </div>
   </div>
   
@@ -75,8 +75,8 @@ hero_description: Explore real-world applications of sampling algorithms across 
       <span class="badge">Intermediate</span>
     </div>
     <div class="example-links">
-      <a href="#" class="example-button">View Tutorial</a>
-      <a href="#" class="example-button secondary">Run in Colab</a>
+      <a href="{{ site.baseurl }}/_examples/Optimisation/linear-regression" class="example-button">View Tutorial</a>
+      <a href="{{ site.baseurl }}/_examples/Optimisation/linear-regression" class="example-button secondary">Read Details</a>
     </div>
   </div>
 </div>

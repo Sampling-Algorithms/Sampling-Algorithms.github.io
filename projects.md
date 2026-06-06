@@ -51,8 +51,8 @@ hero_description: Apply your sampling knowledge with hands-on projects designed 
     </div>
     
     <div class="project-actions">
-      <a href="#" class="project-button">Start Project</a>
-      <a href="#" class="project-button secondary">View Solution</a>
+      <a href="{{ site.baseurl }}/_examples/Bayesian/linear-regression" class="project-button">Start Project</a>
+      <a href="{{ site.baseurl }}/examples" class="project-button secondary">View Solution</a>
     </div>
   </div>
   
@@ -72,7 +72,7 @@ hero_description: Apply your sampling knowledge with hands-on projects designed 
     </div>
     
     <div class="project-actions">
-      <a href="#" class="project-button">Start Project</a>
+      <a href="{{ site.baseurl }}/examples" class="project-button">Start Project</a>
     </div>
   </div>
   
@@ -92,7 +92,7 @@ hero_description: Apply your sampling knowledge with hands-on projects designed 
     </div>
     
     <div class="project-actions">
-      <a href="#" class="project-button">Start Project</a>
+      <a href="{{ site.baseurl }}/examples" class="project-button">Start Project</a>
     </div>
   </div>
   
@@ -112,7 +112,7 @@ hero_description: Apply your sampling knowledge with hands-on projects designed 
     </div>
     
     <div class="project-actions">
-      <a href="#" class="project-button">Start Project</a>
+      <a href="{{ site.baseurl }}/examples" class="project-button">Start Project</a>
     </div>
   </div>
 </div>

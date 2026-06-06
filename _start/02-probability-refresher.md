@@ -5,6 +5,7 @@ order: 2
 icon: "📊"
 ---
 
+
 # Probability Refresher
 
 Before studying sampling algorithms such as Monte Carlo methods, Markov Chain Monte Carlo (MCMC), Langevin dynamics, Hamiltonian Monte Carlo, Sequential Monte Carlo, or Diffusion Models, it is important to understand the language of probability.
@@ -26,7 +27,85 @@ In modern machine learning and statistics, probability is everywhere. Bayesian i
 
 This chapter reviews the essential probability concepts that form the foundation of the sampling methods studied throughout this library.
 
----
+## Mathematical core (equation-first view)
+
+For sampling, these are the central identities to remember:
+
+### 1) Probability space
+
+$$
+(\Omega, \mathcal{F}, \mathbb{P})
+$$
+
+- $\Omega$: sample space
+- $\mathcal{F}$: events (a $\sigma$-algebra)
+- $\mathbb{P}$: probability measure
+
+### 2) Law of total probability
+
+If $\{B_i\}_{i=1}^n$ is a partition of $\Omega$ with $\mathbb{P}(B_i)>0$:
+
+$$
+\mathbb{P}(A) = \sum_{i=1}^{n} \mathbb{P}(A\mid B_i)\,\mathbb{P}(B_i)
+$$
+
+### 3) Bayes' theorem
+
+$$
+\mathbb{P}(A\mid B) = \frac{\mathbb{P}(B\mid A)\,\mathbb{P}(A)}{\mathbb{P}(B)}
+$$
+
+Density form (continuous case):
+
+$$
+p(x\mid y)=\frac{p(y\mid x)p(x)}{p(y)}
+$$
+
+In Bayesian inference:
+
+$$
+p(\theta\mid y) \propto p(y\mid \theta)\,p(\theta)
+$$
+
+### 4) Expectation and variance
+
+$$
+\mathbb{E}[X] = \int_{\mathbb{R}} x\,p_X(x)\,dx
+\quad \text{or} \quad
+\mathbb{E}[X]=\sum_x x\,p_X(x)
+$$
+
+$$
+\mathrm{Var}(X)=\mathbb{E}\big[(X-\mathbb{E}[X])^2\big]=\mathbb{E}[X^2]-\mathbb{E}[X]^2
+$$
+
+### 5) Covariance and correlation
+
+$$
+\mathrm{Cov}(X,Y)=\mathbb{E}\big[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])\big]
+$$
+
+$$
+\rho_{XY}=\frac{\mathrm{Cov}(X,Y)}{\sqrt{\mathrm{Var}(X)\,\mathrm{Var}(Y)}}
+$$
+
+### 6) Conditional expectation
+
+$$
+\mathbb{E}[X\mid Y=y]=\int x\,p(x\mid y)\,dx
+$$
+
+### 7) Monte Carlo estimator (foundation of sampling)
+
+For a target density $\pi$ and test function $f$:
+
+$$
+\pi(f)=\int f(x)\pi(x)dx,
+\qquad
+\hat{\pi}_N(f)=\frac{1}{N}\sum_{i=1}^N f(X_i)
+$$
+
+If $X_i\sim\pi$ (or approximately after convergence in MCMC), then $\hat{\pi}_N(f)$ approximates $\pi(f)$.
 
 ## Why Probability?
 
@@ -55,23 +134,9 @@ After observing the coin, the uncertainty disappears and the outcome becomes kno
 
 Probability theory provides mathematical tools for quantifying uncertainty before observations are made.
 
----
-
 ## Random Variables
 
-A random variable is a mathematical object used to represent the outcome of a random experiment numerically.
-
-For example:
-
-| Experiment | Random Variable |
-|------------|----------------|
-| Roll a die | Number obtained |
-| Toss a coin | 0 = tails, 1 = heads |
-| Measure temperature | Temperature value |
-| Observe image noise | Noise intensity |
-| Measure patient blood pressure | Pressure value |
-
-A random variable does not represent uncertainty itself. Instead, it maps uncertain outcomes to numerical values that can be analyzed mathematically.
+A random variable is a mathematical object used to represent the outcome of a random experiment numerically. It does not represent uncertainty itself. Instead, it maps uncertain outcomes to numerical values that can be analyzed mathematically.
 
 Random variables are typically denoted by capital letters:
 
@@ -127,7 +192,7 @@ X \in \mathbb R
 
 for temperature measurements or Gaussian noise.
 
----
+
 
 ## Probability Mass Functions (PMF)
 
@@ -166,7 +231,6 @@ Probabilities can never be negative.
 
 The probabilities of all possible outcomes must sum to one.
 
----
 
 ## Probability Density Functions (PDF)
 
@@ -203,9 +267,7 @@ Instead, probabilities are computed using areas under the density curve.
 Specifically,
 
 \[
-P(a \le X \le b)
-=
-\int_a^b p(x)\,dx
+P(a \le X \le b)=\int_a^b p(x)\,dx
 \]
 
 This equation states that the probability of finding the random variable between \(a\) and \(b\) equals the area under the density function between those two points.
@@ -233,7 +295,7 @@ p(x)\ge0
 
 This ensures that the random variable must take some value.
 
----
+
 
 ## Example: The Gaussian Distribution
 
@@ -316,7 +378,7 @@ ensures that the total area under the density equals one.
 
 Without this factor, the function would not represent a valid probability distribution.
 
----
+
 
 ## Cumulative Distribution Functions (CDF)
 
@@ -372,7 +434,7 @@ Thus:
 - PDF describes local probability density.
 - CDF describes accumulated probability.
 
----
+
 
 ## Expectation
 
@@ -425,7 +487,7 @@ E[g(X)]
 
 This quantity appears constantly in statistics, Bayesian inference, and machine learning.
 
----
+
 
 ## Variance
 
@@ -488,7 +550,7 @@ The square root of the variance is called the standard deviation:
 
 and is expressed in the same units as the random variable.
 
----
+
 
 ## Joint Distributions
 
@@ -507,7 +569,7 @@ p(x,y)
 
 The joint distribution specifies the probability of observing both variables simultaneously.
 
----
+
 
 ## Marginal Distributions
 
@@ -525,7 +587,7 @@ This process is called marginalization.
 
 Marginalization is one of the most important operations in Bayesian inference.
 
----
+
 
 ## Conditional Probability
 
@@ -541,7 +603,7 @@ p(x|y)
 
 Conditional distributions are fundamental in machine learning, statistics, and Bayesian inference.
 
----
+
 
 ## Bayes' Rule
 
@@ -565,7 +627,7 @@ where:
 
 Bayes' rule lies at the heart of modern Bayesian statistics and probabilistic machine learning.
 
----
+
 
 ## Why Probability Matters for Sampling
 
@@ -613,7 +675,7 @@ This simple idea forms the foundation of:
 
 Everything that follows in this library builds upon these probabilistic concepts.
 
----
+
 
 ## Key Takeaways
 
@@ -635,11 +697,12 @@ After completing this chapter, you should understand:
 
 ✓ Why probability theory is the mathematical foundation of sampling methods
 
----
+
 
 ## Next Chapter
 
 In the next chapter, we will study common probability distributions used throughout statistics, machine learning, Bayesian inference, and Monte Carlo sampling.
 
 👉 **Next: Probability Distributions**
-[Continue Reading...](#)
+
+[Continue to Your First Sampler]({{ site.baseurl }}/start/03-first-sampler/)

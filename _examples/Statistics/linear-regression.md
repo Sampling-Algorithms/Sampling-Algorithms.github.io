@@ -1,52 +1,69 @@
 ---
-title: "Bayesian Linear Regression"
-description: "Use MCMC to sample from posterior distributions of regression parameters. Includes uncertainty quantification and prediction intervals."
+title: "Importance Sampling for Tail Probability Estimation"
+description: "Estimate rare-event probabilities efficiently using weighted samples from a proposal distribution."
 difficulty: "Intermediate"
-icon: "📈"
-category: "bayesian"
-tags: ["Metropolis-Hastings", "PyMC3", "Regression"]
+icon: "📊"
+category: "statistics"
+tags: ["Importance Sampling", "Rare Events", "Monte Carlo"]
 order: 1
-github: "https://github.com/charles-kmc/library-of-sampling-methods/tree/main/examples/bayesian-regression"
-colab: "https://colab.research.google.com/github/charles-kmc/library-of-sampling-methods/blob/main/examples/bayesian-regression.ipynb"
 ---
 
-# Bayesian Linear Regression
+# Importance Sampling for Tail Probability Estimation
 
-This example demonstrates how to use MCMC for Bayesian linear regression, allowing you to quantify uncertainty in your predictions.
+Naive Monte Carlo is inefficient for rare events. Importance sampling focuses computation where rare events occur.
 
-## What You'll Learn
-- Setting up a Bayesian linear regression model
-- Using Metropolis-Hastings to sample from the posterior
-- Visualizing posterior distributions
-- Making predictions with uncertainty intervals
+## Goal
 
-## Code Example
+Estimate the tail probability:
+
+$$
+\mathbb{P}(X > a), \quad X\sim\mathcal{N}(0,1), \ a=4
+$$
+
+Direct Monte Carlo needs many samples because this event is rare.
+
+## Importance sampling estimator
+
+Choose proposal $q(x)=\mathcal{N}(\mu_q,1)$ with $\mu_q>0$.
+
+$$
+\hat{p} = \frac{1}{N}\sum_{i=1}^N \mathbf{1}_{\{x_i>a\}}\,w(x_i),
+\quad x_i\sim q,
+\quad w(x)=\frac{\pi(x)}{q(x)}
+$$
+
+where $\pi$ is the standard normal density.
+
+## Python sketch
+
 ```python
 import numpy as np
-import pymc3 as pm
-import matplotlib.pyplot as plt
+from scipy.stats import norm
 
-# Generate synthetic data
-np.random.seed(42)
-X = np.linspace(0, 10, 100)
-true_slope = 2.5
-true_intercept = 1.0
-y = true_intercept + true_slope * X + np.random.normal(0, 2, size=100)
+N = 10000
+a = 4.0
+mu_q = 4.0
 
-# Build Bayesian model
-with pm.Model() as linear_model:
-    # Priors
-    intercept = pm.Normal('intercept', mu=0, sigma=10)
-    slope = pm.Normal('slope', mu=0, sigma=10)
-    sigma = pm.HalfNormal('sigma', sigma=1)
-    
-    # Likelihood
-    mu = intercept + slope * X
-    likelihood = pm.Normal('y', mu=mu, sigma=sigma, observed=y)
-    
-    # Sample from posterior
-    trace = pm.sample(2000, return_inferencedata=False)
+# Proposal samples
+x = np.random.normal(loc=mu_q, scale=1.0, size=N)
 
-# Plot results
-pm.plot_trace(trace)
-plt.show()
+# Importance weights
+w = norm.pdf(x, loc=0, scale=1) / norm.pdf(x, loc=mu_q, scale=1)
+
+# Rare-event estimate
+estimate = np.mean((x > a) * w)
+print("Estimated P(X > 4):", estimate)
+print("True value:", 1 - norm.cdf(a))
+```
+
+## Diagnostics to monitor
+
+- Weight variance (high variance means unstable estimate)
+- Effective sample size (ESS)
+- Comparison with known analytical benchmark when available
+
+## Key takeaway
+
+A good proposal dramatically reduces variance and makes rare-event estimation practical.
+
+Back to [Examples]({{ site.baseurl }}/examples)
