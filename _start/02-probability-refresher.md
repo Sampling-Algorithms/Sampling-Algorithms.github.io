@@ -696,6 +696,6 @@ After completing this chapter, you should understand:
 
 In the next chapter, we will study common probability distributions used throughout statistics, machine learning, Bayesian inference, and Monte Carlo sampling.
 
-👉 **Next: Probability Distributions**
+**Next: Probability Distributions**
 
 [Continue to Your First Sampler]({{ site.baseurl }}/start/03-first-sampler/)

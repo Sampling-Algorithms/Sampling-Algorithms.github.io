@@ -1,11 +1,10 @@
 ---
-
 layout: post
 title: "Introduction to Sampling: Why Randomness Matters"
 date: 2026-02-13
 categories: [get-started, basics]
 math: true
-----------
+---
 
 # Introduction to Sampling: Why Randomness Matters
 
@@ -38,26 +37,14 @@ $$
 This approximation is known as a **Monte Carlo estimator**. The remarkable fact is that, under very general conditions,
 
 $$
-\hat{\pi}_N(f)\rightarrow\pi(f)
-$$
-
-as
-
-$$
-N \rightarrow \infty.
+\hat{\pi}_N(f)\rightarrow\pi(f) \text{ as } N\rightarrow\infty.
 $$
 
 In other words, averages of random samples eventually converge to the true expectation. This result is a consequence of the Law of Large Numbers and forms the foundation of modern sampling theory.
 
 The power of this idea is difficult to overstate. Rather than fighting the complexity of high-dimensional spaces, sampling embraces it. The computational cost depends primarily on the number of samples generated rather than directly on the dimensionality of the space. This property explains why Monte Carlo methods remain effective in settings where conventional numerical methods completely fail.
 
-To make this idea more concrete, consider a standard Gaussian random variable
-
-$$
-X \sim \mathcal N(0,1).
-$$
-
-Suppose we wish to compute
+To make this idea more concrete, consider a standard Gaussian random variable $X \sim \mathcal N(0,1).$ Suppose we wish to compute
 
 $$
 \mathbb E[X^2].
@@ -87,9 +74,9 @@ Estimated E[X²]: 1.003
 
 which is already extremely close to the exact answer. As the number of samples increases, the estimate becomes increasingly accurate.
 
-The ability to transform difficult integrals into averages over random samples has made sampling indispensable across scientific disciplines. In Bayesian statistics, sampling is used to characterize posterior distributions and quantify uncertainty. In machine learning, stochastic algorithms rely on random samples to train models efficiently on massive datasets. In robotics, particle-based methods help autonomous systems estimate their position in uncertain environments. In computational imaging, sampling methods allow researchers to reconstruct images while simultaneously assessing uncertainty. Even modern diffusion models, which currently power many state-of-the-art image generation systems, can be interpreted as sophisticated sampling procedures designed to generate samples from highly complex probability distributions.
+The ability to transform difficult integrals into averages over random samples has made sampling indispensable across scientific disciplines. In Bayesian statistics, sampling is used to characterize posterior distributions and quantify uncertainty. In machine learning, stochastic algorithms rely on random samples to train models efficiently on massive datasets. In computational imaging, sampling methods allow researchers to reconstruct images while simultaneously assessing uncertainty. Even modern diffusion models, which currently power many state-of-the-art image generation systems, can be interpreted as sophisticated sampling procedures designed to generate samples from highly complex probability distributions.
 
-Of course, generating samples is not always easy. The probability distribution of interest may only be known up to an unknown normalizing constant. The geometry of the distribution may be highly irregular. High-dimensional spaces often contain regions that are difficult to explore efficiently. Furthermore, many practical algorithms generate correlated samples rather than independent ones, introducing additional challenges for statistical estimation. As a result, the central question of sampling theory is not merely how to compute averages, but how to generate representative samples efficiently and reliably.
+Of course, generating samples is not always easy. The probability distribution of interest may only be known up to an unknown normalizing constant. *The geometry of the distribution may be highly irregular*. High-dimensional spaces often contain regions that are *difficult to explore efficiently*. Furthermore, many practical algorithms generate *correlated samples* rather than independent ones, introducing additional challenges for statistical estimation. As a result, the central question of sampling theory is not merely how to compute averages, but how to generate representative samples efficiently and reliably that capture the characteristics of the target distribution.
 
 Over the past century, researchers have developed a remarkable collection of algorithms to address this challenge. Some methods generate samples directly from a distribution. Others construct Markov chains whose long-term behavior reproduces the target distribution. More recent approaches combine deterministic dynamics with random events to improve exploration of high-dimensional spaces. Although these algorithms may appear very different on the surface, they all pursue the same objective: generating samples that faithfully represent a probability distribution.
 
@@ -101,4 +88,4 @@ The key message of this chapter is simple but profound. Many of the most importa
 
 Now that we understand *why* sampling is needed, the next step is to understand the language of probability. In the next chapter, we will review the essential concepts that underpin all sampling algorithms, including random variables, probability distributions, probability density functions, cumulative distribution functions, expectations, variances, and conditional probabilities.
 
-**Next:** Probability Refresher →
+[Continue to Probability Refresher]({{ site.baseurl }}/start/02-probability-refresher/)
