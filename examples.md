@@ -79,6 +79,21 @@ hero_description: Explore real-world applications of sampling algorithms across 
       <a href="{{ site.baseurl }}/_examples/Optimisation/linear-regression" class="example-button secondary">Read Details</a>
     </div>
   </div>
+
+  <div class="example-card">
+    <div class="example-icon">📓</div>
+    <h2>Notebook: Bayesian Regression</h2>
+    <p>Run a full Bayesian linear regression workflow in a Jupyter notebook with posterior sampling and diagnostics.</p>
+    <div class="example-details">
+      <span class="badge">Jupyter</span>
+      <span class="badge">PyMC</span>
+      <span class="badge">Interactive</span>
+    </div>
+    <div class="example-links">
+      <a href="{{ site.baseurl }}/examples/bayesian-linear-regression-notebook" class="example-button">View Notebook Page</a>
+      <a href="https://colab.research.google.com/github/Sampling-Algorithms/Sampling-Algorithms.github.io/blob/main/notebooks/bayesian-linear-regression.ipynb" class="example-button secondary">Open in Colab</a>
+    </div>
+  </div>
 </div>
 
 <style>

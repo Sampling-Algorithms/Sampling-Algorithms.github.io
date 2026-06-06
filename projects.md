@@ -5,20 +5,6 @@ hero_subtitle: Practice Through Projects
 hero_description: Apply your sampling knowledge with hands-on projects designed to build intuition and implementation skills.
 ---
 
-<!-- Navigation Bar -->
-<!-- <div class="top-nav">
-  <a href="{{ site.baseurl }}/" class="nav-link">Home</a>
-  <a href="{{ site.baseurl }}/start" class="nav-link">Start</a>
-  <a href="{{ site.baseurl }}/sampling-tools" class="nav-link">Sampling tools</a>
-  <a href="{{ site.baseurl }}/examples" class="nav-link">Examples</a>
-  <a href="{{ site.baseurl }}/projects" class="nav-link active">Projects</a>
-</div> -->
-
-<!-- <div class="page-header">
-  <h1>Projects</h1>
-  <p>Hands-on projects to apply your sampling knowledge</p>
-</div> -->
-
 <div class="projects-grid">
   <div class="project-card featured">
     <span class="project-tag">Featured</span>

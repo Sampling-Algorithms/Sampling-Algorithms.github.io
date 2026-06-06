@@ -17,7 +17,7 @@ hero_rotate: true
         <div class="flow-arrow">↓</div>
         <a href="{{ site.baseurl }}/examples" class="flow-step">Examples</a>
         <div class="flow-arrow">↓</div>
-        <a href="{{ site.baseurl }}/projects" class="flow-step">Projects</a>
+        <!-- <a href="{{ site.baseurl }}/projects" class="flow-step">Projects</a> -->
       </div>
     </section>
 
