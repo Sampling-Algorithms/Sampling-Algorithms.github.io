@@ -3,6 +3,9 @@ description: "A comprehensive guide to sampling algorithms with interactive note
 baseurl: "" # the subpath of your site
 url: "https://Sampling-Algorithms.github.io" # your GitHub Pages URL
 github_username: Sampling Algorithms 
+# add an mimage as icon for the site, e.g., a logo or relevant graphic
+icon: /assets/images/logo.ico
+# icon: 🌍 # 
 
 # Build settings
 theme: jekyll-theme-cayman
