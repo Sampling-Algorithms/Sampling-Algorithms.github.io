@@ -36,7 +36,7 @@
     </div>
 
     {% unless page.hide_hero %}
-    <header class="page-hero">
+    <header class="page-hero{% if page.hero_rotate %} page-hero-rotating{% endif %}"{% if page.hero_rotate %} id="rotating-hero"{% endif %}>
       <div class="page-hero-content">
         <h1 class="page-hero-title">{{ page.hero_title | default: page.title | default: site.title }}</h1>
         <p class="page-hero-subtitle">{{ page.hero_subtitle | default: "Library of Sampling Methods" }}</p>
@@ -225,6 +225,13 @@
         box-shadow: 0 6px 24px rgba(58, 143, 183, 0.14);
       }
 
+      .page-hero-rotating {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-image 0.8s ease-in-out;
+      }
+
       .page-hero-content {
         max-width: 760px;
         margin: 0 auto;
@@ -340,6 +347,29 @@
             link.classList.add('active');
           }
         });
+
+        const rotatingHero = document.getElementById('rotating-hero');
+        if (rotatingHero) {
+          const heroImages = [
+            "{{ '/assets/images/logo.jpg' | relative_url }}",
+            "{{ '/assets/images/logo1.jpg' | relative_url }}",
+            "{{ '/assets/images/logo2.jpg' | relative_url }}",
+            "{{ '/assets/images/background.png' | relative_url }}"
+          ];
+
+          let currentImageIndex = 0;
+
+          const setHeroImage = function() {
+            rotatingHero.style.backgroundImage = "linear-gradient(rgba(20, 57, 84, 0.55), rgba(43, 118, 150, 0.55)), url('" + heroImages[currentImageIndex] + "')";
+          };
+
+          setHeroImage();
+
+          setInterval(function() {
+            currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+            setHeroImage();
+          }, 5000);
+        }
       });
     </script>
   </body>
