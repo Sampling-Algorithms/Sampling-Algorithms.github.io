@@ -90,7 +90,7 @@ hero_description: Explore real-world applications of sampling algorithms across 
       <span class="badge">Interactive</span>
     </div>
     <div class="example-links">
-      <a href="{{ site.baseurl }}/examples/bayesian-linear-regression-notebook" class="example-button">View Notebook Page</a>
+      <a href="{{ site.baseurl }}/examples/Bayesian/linear-regression" class="example-button">View Notebook Page</a>
       <a href="https://colab.research.google.com/github/Sampling-Algorithms/Sampling-Algorithms.github.io/blob/main/notebooks/bayesian-linear-regression.ipynb" class="example-button secondary">Open in Colab</a>
     </div>
   </div>
