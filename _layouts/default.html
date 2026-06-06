@@ -175,9 +175,7 @@
       .top-nav-links {
             display: flex;
             align-items: center;
-        justify-content: flex-end;
-        margin-left: auto;
-        gap: 24px;
+          gap: 24px;
         }
 
       .top-nav-links a {
@@ -289,7 +287,10 @@
         border-bottom: 1px solid var(--header-text);
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 600px) {
+        body {
+                padding: 60px 0 0;
+            }
         .top-nav {
           height: 60px;
         }
