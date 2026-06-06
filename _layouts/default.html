@@ -67,15 +67,22 @@
     <!-- Global Styles -->
     <style>
       :root {
-        --header-bg: linear-gradient(190deg, #0ffff 10%, #2b7696d1 100%);
-        --header-text: #030303;
-        --header-text-secondary: #080808;
-        --header-description: #0f0f0f;
-        --page-bg: #5f6468;
-        --page-bg-alt: #595454;
+        --header-bg: linear-gradient(
+                135deg,
+                #2b5396 0%,
+                #2b7696d1 100%
+          );
+        --header-text: #ffffff;
+        --header-text-secondary: #e6f0f5;
+        --header-description: #edf5fa;
+
+        --page-bg: #f5f9fc;
+        --page-bg-alt: #ffffff;
+
         --text-primary: #1a2b3c;
         --text-secondary: #2f455c;
         --text-muted: #4f5f6f;
+
         --brand: #2d7a9f;
         --accent-bg: #e6f3fa;
         --accent: #2d7a9f;
@@ -85,10 +92,13 @@
       @media (prefers-color-scheme: dark) {
         :root {
           --page-bg: #18312f;
+          --page-bgs: #121a23;
           --page-bg-alt: #18242f;
+
           --text-primary: #e8f0f7;
           --text-secondary: #c5d3df;
           --text-muted: #9fb2c4;
+
           --brand: #5bb8e6;
           --accent-bg: #1f2e3a;
           --accent: #5bb8e6;
@@ -164,7 +174,7 @@
 
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-end;
       }
 
       .top-bar-logo {
@@ -179,8 +189,8 @@
       .top-bar-links {
             display: flex;
             align-items: center;
-
-            gap: 24px;
+        margin-left: auto;
+        gap: 24px;
         }
 
       .top-bar-links a {
@@ -286,12 +296,12 @@
       }
 
       @media (max-width: 768px) {
-        .top-nav {
+        .top-navs {
           min-height: 60px;
           gap: 12px;
           flex-wrap: wrap;
         }
-        .top-bar {
+        .top-nav {
           height: 60px;
         }
         .top-bar-content {
