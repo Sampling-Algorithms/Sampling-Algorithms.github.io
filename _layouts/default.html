@@ -11,6 +11,16 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     
     <!-- MathJax for equations -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
     
     <!-- Font Awesome for icons -->
@@ -25,6 +35,7 @@
         <a class="top-nav-logo" href="{{ site.baseurl }}/">
           <img src="{{ '/assets/images/vm.ico' | relative_url }}" alt="Library of Sampling Methods Logo" width="32" height="32">
         </a>
+        <a class="top-nav-brand" href="{{ site.baseurl }}/">| VISION MATHS LABS</a>
         <div class="top-nav-links">
           <a href="{{ site.baseurl }}/" class="nav-link">Home</a>
           <a href="{{ site.baseurl }}/start" class="nav-link">Start</a>
@@ -113,13 +124,20 @@
         box-sizing: border-box;
       }
 
+      /* Remove heading borders globally */
+      h1, h2, h3, h4, h5, h6 {
+        border: none;
+        border-bottom: none;
+      }
+
       html {
         scroll-behavior: smooth;
         scroll-padding-top: 90px;
       }
 
       body {
-        font-family: "Segoe UI", system-ui, sans-serif;
+        /* font-family: "Segoe UI", system-ui, sans-serif; */
+        font-family: "Roboto", sans-serif;
         line-height: 1.6;
         color: var(--text-primary);
         background: var(--page-bg);
@@ -171,6 +189,15 @@
 
             text-decoration: none;
         }
+
+          .top-nav-brand {
+            color: var(--header-text);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            margin-left: 8px;
+          }
 
       .top-nav-links {
             display: flex;

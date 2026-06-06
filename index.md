@@ -56,7 +56,7 @@ hero_rotate: true
 
 <style>
   .poster-container {
-    max-width: 700px;
+    max-width: 100%;
     margin: 32px auto 0;
     background: var(--page-bg);
     border-radius: 28px;

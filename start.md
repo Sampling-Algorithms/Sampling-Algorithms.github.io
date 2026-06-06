@@ -69,7 +69,7 @@ hero_description: Begin your journey into the world of sampling algorithms with 
 }
 
 .learning-path {
-  max-width: 900px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -174,7 +174,7 @@ hero_description: Begin your journey into the world of sampling algorithms with 
 
 /* Progress Tracker */
 .progress-tracker {
-  max-width: 900px;
+  max-width: 100%;
   margin: 3rem auto;
   padding: 2rem;
   background: white;

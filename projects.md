@@ -14,15 +14,15 @@ hero_description: Apply your sampling knowledge with hands-on projects designed 
   <a href="{{ site.baseurl }}/projects" class="nav-link active">Projects</a>
 </div> -->
 
-<div class="page-header">
-  <h1>📚 Projects</h1>
+<!-- <div class="page-header">
+  <h1>Projects</h1>
   <p>Hands-on projects to apply your sampling knowledge</p>
-</div>
+</div> -->
 
 <div class="projects-grid">
   <div class="project-card featured">
     <span class="project-tag">Featured</span>
-    <h2>🔬 MCMC Diagnostics Suite</h2>
+    <h2>MCMC Diagnostics Suite</h2>
     <p class="project-description">Build a comprehensive diagnostic tool for MCMC algorithms. Implement trace plots, autocorrelation analysis, effective sample size calculation, and convergence diagnostics.</p>
     
     <div class="project-specs">
@@ -43,10 +43,10 @@ hero_description: Apply your sampling knowledge with hands-on projects designed 
     <div class="project-steps">
       <h3>What you'll build:</h3>
       <ul>
-        <li>📊 Trace plot visualizer with multiple chains</li>
-        <li>📈 Autocorrelation function calculator</li>
-        <li>📉 Effective sample size estimator</li>
-        <li>✅ Gelman-Rubin diagnostic</li>
+        <li>Trace plot visualizer with multiple chains</li>
+        <li>Autocorrelation function calculator</li>
+        <li>Effective sample size estimator</li>
+        <li>Gelman-Rubin diagnostic</li>
       </ul>
     </div>
     
@@ -57,7 +57,7 @@ hero_description: Apply your sampling knowledge with hands-on projects designed 
   </div>
   
   <div class="project-card">
-    <h2>🧬 Phylogenetic Tree Inference</h2>
+    <h2>Phylogenetic Tree Inference</h2>
     <p class="project-description">Use MCMC to reconstruct evolutionary trees from DNA sequences. Implement a simple version of MrBayes.</p>
     
     <div class="project-specs">
@@ -77,7 +77,7 @@ hero_description: Apply your sampling knowledge with hands-on projects designed 
   </div>
   
   <div class="project-card">
-    <h2>🤖 Robot Localization with Particle Filters</h2>
+    <h2> Robot Localization with Particle Filters</h2>
     <p class="project-description">Implement a particle filter for robot position tracking using sensor data and motion models.</p>
     
     <div class="project-specs">
@@ -97,7 +97,7 @@ hero_description: Apply your sampling knowledge with hands-on projects designed 
   </div>
   
   <div class="project-card">
-    <h2>🎨 Variational Autoencoder from Scratch</h2>
+    <h2> Variational Autoencoder from Scratch</h2>
     <p class="project-description">Build a VAE and understand the reparameterization trick for sampling from latent spaces.</p>
     
     <div class="project-specs">

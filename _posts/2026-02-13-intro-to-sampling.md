@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🎯 Introduction to Sampling: Why Randomness Matters"
+title: "Introduction to Sampling: Why Randomness Matters"
 date: 2026-02-13
 categories: [get-started, basics]
 math: true
