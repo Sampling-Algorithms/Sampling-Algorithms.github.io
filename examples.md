@@ -14,10 +14,10 @@ hero_description: Explore real-world applications of sampling algorithms across 
   <a href="{{ site.baseurl }}/projects" class="nav-link">Projects</a>
 </div> -->
 
-<div class="page-header">
+<!-- <div class="page-header">
   <h1>💡 Examples</h1>
   <p>Real-world applications of sampling algorithms</p>
-</div>
+</div> -->
 
 <div class="examples-grid">
   <div class="example-card">

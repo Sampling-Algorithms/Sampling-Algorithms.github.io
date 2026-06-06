@@ -146,7 +146,10 @@ header h2 {
 .example-card h3,
 .genmodel-card h3 {
   margin-top: 0;
-  color: var(--accent-color);
+  background: var(--accent-color);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
   font-size: 1.3rem;
 }
 
@@ -517,7 +520,20 @@ h2 {
 
 h3 {
   margin-top: 30px;
-  color: var(--accent-color);
+  background: var(--accent-color);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+h4 {
+  margin-top: 20px;
+  background: var(--accent-color);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  display: inline-block;
 }
 
 /* Images */

@@ -14,10 +14,10 @@ hero_description: Begin your journey into the world of sampling algorithms with 
   <a href="{{ site.baseurl }}/projects" class="nav-link">Projects</a>
 </div> -->
 
-<div class="page-header">
+<!-- <div class="page-header">
   <h1>🚀 Get Started with Sampling</h1>
   <p>Begin your journey into the world of sampling algorithms</p>
-</div>
+</div> -->
 
 <div class="learning-path">
   <h2>Learning Path</h2>
