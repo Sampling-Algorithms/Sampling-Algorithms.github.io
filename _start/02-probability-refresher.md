@@ -618,11 +618,12 @@ p(x|y)
 $$
 
 where:
-
-- \(p(x)\) is the prior,
-- \(p(y|x)\) is the likelihood,
-- \(p(x|y)\) is the posterior,
-- \(p(y)\) is the evidence.
+<ul>
+    <li>\(p(x)\) is the prior distribution representing our initial beliefs about \(x\)</li>
+    <li>\(p(y|x)\) is the likelihood representing how likely the observed data \(y\) is given \(x\)</li>
+    <li>\(p(x|y)\) is the posterior distribution representing our updated beliefs about \(x\) after observing \(y\)</li>
+    <li>\(p(y)\) is the evidence representing the overall probability of observing \(y\)</li>
+</ul>
 
 Bayes' rule lies at the heart of modern Bayesian statistics and probabilistic machine learning.
 
