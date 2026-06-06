@@ -14,10 +14,10 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
   <a href="{{ site.baseurl }}/projects" class="nav-link">Projects</a>
 </div> -->
 
-<div class="page-header">
+<!-- <div class="page-header">
   <h1>🔧 Sampling Tools</h1>
   <p>A comprehensive collection of sampling algorithms</p>
-</div>
+</div> -->
 
 <div class="tools-category">
   <h2>Basic Methods</h2>
@@ -135,6 +135,7 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #667eea;
+  font-family: "Roboto", sans-serif
 }
 
 .tools-grid {
