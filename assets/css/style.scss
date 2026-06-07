@@ -355,12 +355,16 @@ header h2 {
 pre {
   background: #1e1e1e;
   color: #d4d4d4;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 16px 18px;
+  border-radius: 10px;
+  border: 1px solid #2b2b2b;
+  border-left: 4px solid var(--accent-color);
   overflow-x: auto;
   font-family: 'Fira Code', 'Consolas', monospace;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  tab-size: 2;
   margin: 20px 0;
 }
 
@@ -377,6 +381,107 @@ pre code {
   background: transparent;
   padding: 0;
   color: inherit;
+  display: block;
+  white-space: pre;
+}
+
+.highlighter-rouge,
+.highlight {
+  margin: 1rem 0;
+}
+
+.highlight pre,
+.language-python pre {
+  margin: 0;
+}
+
+.highlight .k,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt {
+  color: #c586c0;
+}
+
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sa,
+.highlight .sb,
+.highlight .sc,
+.highlight .dl {
+  color: #ce9178;
+}
+
+.highlight .c,
+.highlight .c1,
+.highlight .cm,
+.highlight .cp {
+  color: #6a9955;
+  font-style: italic;
+}
+
+.highlight .mi,
+.highlight .mf,
+.highlight .mo {
+  color: #b5cea8;
+}
+
+.highlight .nf,
+.highlight .fm {
+  color: #dcdcaa;
+}
+
+.highlight .nb,
+.highlight .bp {
+  color: #4ec9b0;
+}
+
+@media print {
+  pre,
+  .highlight pre {
+    background: #ffffff !important;
+    color: #111111 !important;
+    border: 1px solid #bcbcbc !important;
+    border-left: 3px solid #555555 !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    overflow: visible;
+  }
+
+  code {
+    background: #f2f2f2 !important;
+    color: #111111 !important;
+  }
+
+  .highlight .k,
+  .highlight .kd,
+  .highlight .kn,
+  .highlight .kp,
+  .highlight .kr,
+  .highlight .kt,
+  .highlight .s,
+  .highlight .s1,
+  .highlight .s2,
+  .highlight .sa,
+  .highlight .sb,
+  .highlight .sc,
+  .highlight .dl,
+  .highlight .c,
+  .highlight .c1,
+  .highlight .cm,
+  .highlight .cp,
+  .highlight .mi,
+  .highlight .mf,
+  .highlight .mo,
+  .highlight .nf,
+  .highlight .fm,
+  .highlight .nb,
+  .highlight .bp {
+    color: #111111 !important;
+    font-style: normal !important;
+  }
 }
 
 /* Tables */
