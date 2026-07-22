@@ -13,6 +13,13 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+# Include category folders whose leading underscores would otherwise make
+# Jekyll treat them as private source directories.
+include:
+  - _tools/_basics
+  - _tools/_mcmcs
+  - _tools/_advanced
+
 # Markdown settings
 markdown: kramdown
 kramdown:
