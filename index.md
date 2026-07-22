@@ -58,6 +58,12 @@ hero_rotate: true
 </div>
 
 <style>
+  .page-hero-title,
+  .page-hero-subtitle,
+  .page-hero-description {
+    color: #ffd700 !important;
+  }
+
   .poster-container {
     max-width: 100%;
     margin: 32px auto 0;
@@ -80,11 +86,6 @@ hero_rotate: true
     border-radius: 22px;
   }
 
-  .section,
-  .section * {
-    color: #ffd700 !important;
-  }
-
   .section-title {
     margin: 0 0 12px;
     border: 0;
@@ -102,20 +103,16 @@ hero_rotate: true
   .flow {
     display: flex;
     flex-direction: row;
-    gap: 16px;
+    gap: 10px;
   }
 
   .flow-step {
-    display: flex;
-    flex: 1 1 0;
-    align-items: center;
-    justify-content: center;
+    flex: 1;
     padding: 13px 15px;
     background: var(--page-bg);
     border: 1px solid var(--brand);
     border-radius: 10px;
     font-weight: 600;
-    text-align: center;
     text-decoration: none;
     color: var(--text-primary);
   }
@@ -187,10 +184,6 @@ hero_rotate: true
 
     .main-content {
       padding: 20px;
-    }
-
-    .flow {
-      flex-direction: column;
     }
   }
 </style>

@@ -47,7 +47,7 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
   background: white;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  font-family: "Roboto", sans-serif;
+  font-family: inherit;
 }
 
 .tools-empty-state h2 {
@@ -63,7 +63,7 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
 
 .tools-category {
   margin: 3rem 0;
-  font-family: "Roboto", sans-serif;
+  font-family: inherit;
 }
 
 .tools-category h2 {
@@ -71,14 +71,14 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 0 solid #0f111a;
-  font-family: "Roboto", sans-serif;
+  font-family: inherit;
 }
 
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  font-family: "Roboto", sans-serif;
+  font-family: inherit;
 }
 
 .tool-card {
@@ -87,7 +87,7 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  font-family: "Roboto", sans-serif;
+  font-family: inherit;
 }
 
 .tool-card:hover {
