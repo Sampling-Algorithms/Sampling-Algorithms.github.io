@@ -61,7 +61,7 @@ hero_rotate: true
   .page-hero-title,
   .page-hero-subtitle,
   .page-hero-description {
-    color: #ffd700 !important;
+    color: var(--bright-gold) !important;
   }
 
   .poster-container {
@@ -81,9 +81,9 @@ hero_rotate: true
   }
 
   .section {
-    padding: 22px 24px;
-    background: var(--accent-bg);
-    border-radius: 22px;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
   }
 
   .section-title {
