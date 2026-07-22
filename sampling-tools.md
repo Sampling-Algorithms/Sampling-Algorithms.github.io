@@ -25,18 +25,18 @@ permalink: /sampling-tools/
     {% when "Advanced Methods" %}{% assign section_tools = advanced_tools %}
   {% endcase %}
   {% if section_tools.size > 0 %}
-    <div class="tools-category">
-      <h2>{{ section_title }}</h2>
-      <div class="tools-grid">
-        {% for tool in section_tools %}
-          <div class="tool-card">
-            <h3>{{ tool.title }}</h3>
-            <p>{{ tool.description }}</p>
-            <a href="{{ tool.url | relative_url }}" class="tool-link">Learn More &rarr;</a>
-          </div>
-        {% endfor %}
-      </div>
+<div class="tools-category">
+  <h2>{{ section_title }}</h2>
+  <div class="tools-grid">
+    {% for tool in section_tools %}
+    <div class="tool-card">
+      <h3>{{ tool.title }}</h3>
+      <p>{{ tool.description }}</p>
+      <a href="{{ tool.url | relative_url }}" class="tool-link">Learn More &rarr;</a>
     </div>
+    {% endfor %}
+  </div>
+</div>
   {% endif %}
 {% endfor %}
 

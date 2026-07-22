@@ -2,7 +2,7 @@
 title: "Zig-Zag Sampler"
 description: "Understand the Zig-Zag piecewise deterministic Markov process (PDMP) sampler for high-dimensional Bayesian inference."
 order: 5
-icon: "⚡"
+# icon: "⚡"
 ---
 
 # Zig-Zag Sampler (PDMP)

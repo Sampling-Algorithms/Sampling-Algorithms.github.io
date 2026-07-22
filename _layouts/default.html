@@ -58,7 +58,9 @@
     <header class="page-hero{% if page.hero_rotate %} page-hero-rotating{% endif %}"{% if page.hero_rotate %} id="rotating-hero"{% endif %}>
       <div class="page-hero-content">
         <h1 class="page-hero-title">{{ page.hero_title | default: page.title | default: site.title }}</h1>
-        <p class="page-hero-subtitle">{{ page.hero_subtitle | default: "Library of Sampling Methods" }}</p>
+        {% if page.hero_subtitle %}
+        <p class="page-hero-subtitle">{{ page.hero_subtitle }}</p>
+        {% endif %}
         {% if page.hero_description %}
         <p class="page-hero-description">{{ page.hero_description }}</p>
         {% endif %}

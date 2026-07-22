@@ -2,7 +2,7 @@
 title: "Basic Methods"
 description: "Learn the three foundational sampling methods: inverse transform, rejection sampling, and importance sampling."
 order: 4
-icon: "🎲"
+# icon: "🎲"
 ---
 
 # Basic Sampling Methods

@@ -2,7 +2,7 @@
 title: "Your First Sampler"
 description: "Build your first practical sampler from scratch using inverse transform and Box-Muller methods."
 order: 3
-icon: "🛠️"
+# icon: "🛠️"
 ---
 
 # Your First Sampler

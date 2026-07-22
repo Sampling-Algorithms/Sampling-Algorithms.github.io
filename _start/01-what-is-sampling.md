@@ -2,7 +2,7 @@
 title: "What is Sampling?"
 description: "Understanding the basics of sampling"
 order: 1
-icon: "🎯"
+# icon: "🎯"
 ---
 
 # The sampling problem 

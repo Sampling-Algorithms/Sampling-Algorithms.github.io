@@ -2,7 +2,7 @@
 title: "Probability Refresher"
 description: "Review PDFs, CDFs, random variables, expectation, variance, and the probabilistic foundations of sampling methods."
 order: 2
-icon: "📊"
+# icon: "📊"
 ---
 
 
