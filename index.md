@@ -8,6 +8,38 @@ hero_rotate: true
 ---
 <div class="poster-container">
   <main class="main-content">
+    <section class="section about-section">
+      <h2 class="section-title">About Sampling Tools</h2>
+      <div class="about-content">
+        <p>
+          Sampling Tools is an educational library for learning, comparing, and applying
+          computational sampling methods. It brings together clear explanations,
+          step-by-step tutorials, practical algorithms, and worked examples for problems
+          in machine learning, Bayesian inference, statistics, and computational science.
+        </p>
+        <p>
+          Sampling is important because many real-world probability distributions are too
+          complex to study directly. Well-designed sampling methods allow us to approximate
+          expectations, quantify uncertainty, explore complicated models, and make reliable
+          inferences when an exact analytical solution is unavailable.
+        </p>
+
+        <h3>What you will find here</h3>
+        <ul>
+          <li><strong>Guided tutorials</strong> that introduce the key ideas from the ground up.</li>
+          <li><strong>Sampling algorithms</strong> ranging from foundational methods to advanced MCMC techniques.</li>
+          <li><strong>Practical examples</strong> showing how the methods behave and when to use them.</li>
+          <li><strong>Implementation guidance</strong> for building, validating, and comparing your own samplers.</li>
+        </ul>
+
+        <p>
+          The library is intended for students, researchers, and practitioners at different
+          levels of experience. New visitors can begin with the introductory tutorial, while
+          experienced users can go directly to the algorithm library or explore the examples.
+        </p>
+      </div>
+    </section>
+
     <section class="section">
       <h2 class="section-title">Quick Links</h2>
       <div class="flow">
@@ -98,6 +130,32 @@ hero_rotate: true
     margin: 0;
     color: var(--text-secondary);
     line-height: 1.6;
+  }
+
+  .about-content {
+    max-width: 920px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .about-content p {
+    margin: 0 0 14px;
+  }
+
+  .about-content h3 {
+    margin: 20px 0 8px;
+    color: var(--text-primary);
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  .about-content ul {
+    margin: 0 0 16px;
+    padding-left: 24px;
+  }
+
+  .about-content li {
+    margin-bottom: 7px;
   }
 
   .flow {

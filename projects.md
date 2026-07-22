@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Projects
-hero_subtitle: Practice Through Projects
-hero_description: Apply your sampling knowledge with hands-on projects designed to build intuition and implementation skills.
+# hero_subtitle: Practice Through Projects
+# hero_description: Apply your sampling knowledge with hands-on projects designed to build intuition and implementation skills.
 ---
 
 <div class="projects-grid">

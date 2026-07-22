@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Sampling Tools
-hero_subtitle: Algorithm Library
-hero_description: Browse a comprehensive collection of sampling algorithms, from foundational methods to advanced MCMC techniques.
+permalink: /sampling-tools/
+# hero_subtitle: Algorithm Library
+# hero_description: Browse a comprehensive collection of sampling algorithms, from foundational methods to advanced MCMC techniques.
 ---
 {% assign basic_tools = site.tools | where_exp: "tool", "tool.path contains '/basics/'" | sort: "order" %}
 {% assign mcmc_tools = site.tools | where_exp: "tool", "tool.path contains '/mcmcs/'" | sort: "order" %}

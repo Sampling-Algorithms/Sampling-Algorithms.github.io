@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Get Started with Sampling
-hero_subtitle: Beginner Learning Path
-hero_description: Begin your journey into the world of sampling algorithms with a guided, step-by-step sequence.
+# hero_subtitle: Beginner Learning Path
+# hero_description: Begin your journey into the world of sampling algorithms with a guided, step-by-step sequence.
 ---
 
 <div class="learning-path">
