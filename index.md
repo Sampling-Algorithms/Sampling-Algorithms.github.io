@@ -11,12 +11,15 @@ hero_rotate: true
     <section class="section">
       <h2 class="section-title">Quick Links</h2>
       <div class="flow">
-        <a href="{{ site.baseurl }}/start" class="flow-step">Start Tutorial</a>
-        <div class="flow-arrow">↓</div>
-        <a href="{{ site.baseurl }}/sampling-tools" class="flow-step">Sampling Tools</a>
-        <div class="flow-arrow">↓</div>
-        <a href="{{ site.baseurl }}/examples" class="flow-step">Examples</a>
-        <div class="flow-arrow">↓</div>
+        <a href="{{ site.baseurl }}/start" class="flow-step">
+          Start Tutorial
+        </a>
+        <a href="{{ site.baseurl }}/sampling-tools"  
+          class="flow-step">Sampling Tools
+        </a>
+        <a href="{{ site.baseurl }}/examples" class="flow-step">
+          Examples
+        </a>
         <!-- <a href="{{ site.baseurl }}/projects" class="flow-step">Projects</a> -->
       </div>
     </section>
@@ -93,11 +96,12 @@ hero_rotate: true
 
   .flow {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
   }
 
   .flow-step {
+    flex: 1;
     padding: 13px 15px;
     background: var(--page-bg);
     border: 1px solid var(--brand);
@@ -109,14 +113,6 @@ hero_rotate: true
 
   .flow-step:hover {
     color: var(--brand);
-  }
-
-  .flow-arrow {
-    color: var(--brand);
-    font-size: 40px;
-    font-weight: 800;
-    text-align: center;
-    line-height: 1;
   }
 
   .latest-list {

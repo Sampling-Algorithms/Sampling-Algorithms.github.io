@@ -5,20 +5,6 @@ hero_subtitle: Algorithm Library
 hero_description: Browse a comprehensive collection of sampling algorithms, from foundational methods to advanced MCMC techniques.
 ---
 
-<!-- Navigation Bar -->
-<!-- <div class="top-nav">
-  <a href="{{ site.baseurl }}/" class="nav-link">Home</a>
-  <a href="{{ site.baseurl }}/start" class="nav-link">Start</a>
-  <a href="{{ site.baseurl }}/sampling-tools" class="nav-link active">Sampling tools</a>
-  <a href="{{ site.baseurl }}/examples" class="nav-link">Examples</a>
-  <a href="{{ site.baseurl }}/projects" class="nav-link">Projects</a>
-</div> -->
-
-<!-- <div class="page-header">
-  <h1>🔧 Sampling Tools</h1>
-  <p>A comprehensive collection of sampling algorithms</p>
-</div> -->
-
 <div class="tools-category">
   <h2>Basic Methods</h2>
   <div class="tools-grid">
@@ -135,7 +121,7 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
   color: #333;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 0px solid #667eea;
+  border-bottom: 0px solid #0f111a;
   font-family: "Roboto", sans-serif;
 }
 
