@@ -43,6 +43,9 @@ collections:
   start:
     output: true
     permalink: /start/:name/
+  tools:
+    output: true
+    permalink: /tools/:path/
   tutorials:
     output: true
     permalink: /:collection/:name
