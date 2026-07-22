@@ -37,7 +37,7 @@ hero_rotate: true
       </div>
     </section>
 
-    <section class="section">
+    <!-- <section class="section">
       <h2 class="section-title">Website Snapshot</h2>
       <div class="stat-grid">
         <div class="stat-card">
@@ -53,7 +53,7 @@ hero_rotate: true
           <div class="stat-label">Core Sections</div>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
 </div>
 
@@ -80,6 +80,11 @@ hero_rotate: true
     border-radius: 22px;
   }
 
+  .section,
+  .section * {
+    color: #ffd700 !important;
+  }
+
   .section-title {
     margin: 0 0 12px;
     border: 0;
@@ -97,16 +102,20 @@ hero_rotate: true
   .flow {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 16px;
   }
 
   .flow-step {
-    flex: 1;
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: center;
     padding: 13px 15px;
     background: var(--page-bg);
     border: 1px solid var(--brand);
     border-radius: 10px;
     font-weight: 600;
+    text-align: center;
     text-decoration: none;
     color: var(--text-primary);
   }
@@ -178,6 +187,10 @@ hero_rotate: true
 
     .main-content {
       padding: 20px;
+    }
+
+    .flow {
+      flex-direction: column;
     }
   }
 </style>

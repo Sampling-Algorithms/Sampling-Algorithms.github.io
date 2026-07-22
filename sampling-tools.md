@@ -4,9 +4,17 @@ title: Sampling Tools
 hero_subtitle: Algorithm Library
 hero_description: Browse a comprehensive collection of sampling algorithms, from foundational methods to advanced MCMC techniques.
 ---
-{% assign basic_tools = site.tools | where_exp: "tool", "tool.path contains '/_basics/'" | sort: "order" %}
-{% assign mcmc_tools = site.tools | where_exp: "tool", "tool.path contains '/_mcmcs/'" | sort: "order" %}
-{% assign advanced_tools = site.tools | where_exp: "tool", "tool.path contains '/_advanced/'" | sort: "order" %}
+{% assign basic_tools = site.tools | where_exp: "tool", "tool.path contains '/basics/'" | sort: "order" %}
+{% assign mcmc_tools = site.tools | where_exp: "tool", "tool.path contains '/mcmcs/'" | sort: "order" %}
+{% assign advanced_tools = site.tools | where_exp: "tool", "tool.path contains '/advanced/'" | sort: "order" %}
+{% assign total_tools = basic_tools.size | plus: mcmc_tools.size | plus: advanced_tools.size %}
+
+{% if total_tools == 0 %}
+  <div class="tools-empty-state">
+    <h2>This page is empty for now</h2>
+    <p>New sampling tools will be added soon. Please check back later.</p>
+  </div>
+{% endif %}
 
 {% assign tool_sections = "Basic Methods|Markov Chain Monte Carlo (MCMC)|Advanced Methods" | split: "|" %}
 {% for section_title in tool_sections %}
@@ -32,6 +40,27 @@ hero_description: Browse a comprehensive collection of sampling algorithms, from
 {% endfor %}
 
 <style>
+.tools-empty-state {
+  margin: 3rem 0;
+  padding: 2rem;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Roboto", sans-serif;
+}
+
+.tools-empty-state h2 {
+  margin: 0 0 1rem;
+  color: #333;
+}
+
+.tools-empty-state p {
+  margin: 0;
+  color: #000;
+  line-height: 1.6;
+}
+
 .tools-category {
   margin: 3rem 0;
   font-family: "Roboto", sans-serif;

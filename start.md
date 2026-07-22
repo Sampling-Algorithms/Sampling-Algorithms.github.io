@@ -28,14 +28,14 @@ hero_description: Begin your journey into the world of sampling algorithms with 
   </div>
 </div>
 
-<!-- Progress Tracker -->
+<!-- Progress Tracker
 <div class="progress-tracker">
   <h3>Your Progress</h3>
   <div class="progress-bar-container">
     <div class="progress-bar" style="width: 0%" id="progress-bar"></div>
   </div>
   <p class="progress-text">0/{{ site.start | size }} completed</p>
-</div>
+</div> -->
 
 <style>
 .page-header {
