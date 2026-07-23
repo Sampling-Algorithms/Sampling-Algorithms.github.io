@@ -70,7 +70,8 @@ title: Get Started with Sampling
 
 .learning-path {
   max-width: 100%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin: 32px auto 0;
   padding: 28px;
 }
 
@@ -105,16 +106,29 @@ title: Get Started with Sampling
 }
 
 .path-steps {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1rem; */
+
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
 }
 
+.section {
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+  }
+
 .step {
-  display: flex;
-  gap: 1.rem;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  /* display: flex;
+  gap: 1.rem; */
   /* align-items: flex-start; */
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
   /* border-radius: 10px; */
   /* box-shadow: 0 2px 8px rgba(0,0,0,0.1); */
   /* transition: all 0.3s ease; */
