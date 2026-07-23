@@ -31,7 +31,7 @@ title: Get Started with Sampling
         <!-- <div class="step-number">{{ tutorial.order }}</div> -->
         <div class="step-content">
           <div class="step-icon">{{ tutorial.icon }}</div>
-          <h3>{{ tutorial.title }}</h3>
+          <h2>{{ tutorial.title }}</h2>
           <p>{{ tutorial.description }}</p>
           <a href="{{ site.baseurl }}{{ tutorial.url }}" class="step-link">
             Start 
@@ -108,9 +108,9 @@ title: Get Started with Sampling
 }
 
 .path-steps {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  gap: 1rem; */
+  gap: 0;
 
   padding: 0;
   background: transparent;
@@ -189,7 +189,7 @@ title: Get Started with Sampling
 
 .step-link {
   align-self: flex-start;
-  color: #667eea;
+  color: #a3afe2;
   text-decoration: none;
   font-weight: 500;
   display: inline-flex;
@@ -202,7 +202,7 @@ title: Get Started with Sampling
 }
 
 .step-link:hover {
-  background: #667eea;
+  background: #9fade9;
   /* color: white; */
   gap: 1rem;
 }
