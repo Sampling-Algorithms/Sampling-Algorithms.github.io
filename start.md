@@ -84,7 +84,7 @@ title: Get Started with Sampling
 
 .learning-path-introduction {
   max-width: 100%;
-  margin: 1.5rem auto 2rem;
+  /* margin: 1.5rem auto 2rem; */
   color: #333;
   line-height: 1.7;
 }
@@ -187,14 +187,14 @@ title: Get Started with Sampling
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: #f0f4ff;
+  /* background: #f0f4ff; */
   border-radius: 5px;
   transition: all 0.3s ease;
 }
 
 .step-link:hover {
   background: #667eea;
-  color: white;
+  /* color: white; */
   gap: 1rem;
 }
 
