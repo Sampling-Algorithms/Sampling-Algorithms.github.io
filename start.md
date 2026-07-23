@@ -6,40 +6,42 @@ title: Get Started with Sampling
 ---
 
 <div class="learning-path">
-  <section class="learning-path-introduction" aria-labelledby="learning-path-about-title">
-    <h3 id="learning-path-about-title">Building the knowledge to design samplers</h3>
-    <p>
-      Building reliable sampling methods requires some background in probability,
-      probability distributions, statistics, numerical computation, and programming.
-      These ideas help explain how a sampler works, why it targets the correct
-      distribution, and how to recognise convergence problems or biased results.
-    </p>
-    <p>
-      This page provides the tools needed to develop that foundation. The learning path
-      starts with the central ideas behind sampling, refreshes the essential probability
-      concepts, and then moves towards implementing and evaluating practical algorithms.
-      You do not need to master every topic before beginning—each lesson introduces the
-      knowledge you need as you progress.
-    </p>
-  </section>
-  
-  <div class="path-steps">
-    {% assign tutorials = site.start | sort: 'order' %}
-    {% for tutorial in tutorials %}
-    <div class="step">
-      <!-- <div class="step-number">{{ tutorial.order }}</div> -->
-      <div class="step-content">
-        <div class="step-icon">{{ tutorial.icon }}</div>
-        <h3>{{ tutorial.title }}</h3>
-        <p>{{ tutorial.description }}</p>
-        <a href="{{ site.baseurl }}{{ tutorial.url }}" class="step-link">
-          Start 
-          <i class="fas fa-arrow-right"></i>
-        </a>
+  <main class="main-content">
+    <section class="learning-path-introduction" aria-labelledby="learning-path-about-title">
+      <h3 id="learning-path-about-title">Building the knowledge to design samplers</h3>
+      <p>
+        Building reliable sampling methods requires some background in probability,
+        probability distributions, statistics, numerical computation, and programming.
+        These ideas help explain how a sampler works, why it targets the correct
+        distribution, and how to recognise convergence problems or biased results.
+      </p>
+      <p>
+        This page provides the tools needed to develop that foundation. The learning path
+        starts with the central ideas behind sampling, refreshes the essential probability
+        concepts, and then moves towards implementing and evaluating practical algorithms.
+        You do not need to master every topic before beginning—each lesson introduces the
+        knowledge you need as you progress.
+      </p>
+    </section>
+    
+    <div class="path-steps">
+      {% assign tutorials = site.start | sort: 'order' %}
+      {% for tutorial in tutorials %}
+      <div class="step">
+        <!-- <div class="step-number">{{ tutorial.order }}</div> -->
+        <div class="step-content">
+          <div class="step-icon">{{ tutorial.icon }}</div>
+          <h3>{{ tutorial.title }}</h3>
+          <p>{{ tutorial.description }}</p>
+          <a href="{{ site.baseurl }}{{ tutorial.url }}" class="step-link">
+            Start 
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
-  </div>
+  </main>
 </div>
 
 <!-- Progress Tracker
@@ -121,6 +123,13 @@ title: Get Started with Sampling
     border-radius: 0;
   }
 
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 28px;
+  }
+
 .step {
   padding: 0;
   background: transparent;
@@ -174,7 +183,7 @@ title: Get Started with Sampling
 
 .step-content p {
   color: #666;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   line-height: 1.6;
 }
 
@@ -226,6 +235,10 @@ title: Get Started with Sampling
 @media (max-width: 600px) {
   .learning-path {
     padding: 20px;
+  }
+
+  .main-content {
+    padding: 20px
   }
 
 }

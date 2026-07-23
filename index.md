@@ -7,9 +7,7 @@ hero_description: We develop and study sampling methods for machine learning, Ba
 hero_rotate: true
 ---
 <div class="poster-container">
-dfdgdg
   <main class="main-content">
-  dfdgdg
     <section class="section about-section">
       <h1 class="section-title">About Sampling Tools</h1>
       <div class="about-content">
@@ -54,7 +52,7 @@ dfdgdg
         <a href="{{ site.baseurl }}/examples" class="flow-step">
           Examples
         </a>
-        <!-- <a href="{{ site.baseurl }}/projects" class="flow-step">Projects</a> -->
+        <a href="{{ site.baseurl }}/projects" class="flow-step">Projects</a>
       </div>
     </section> -->
 
