@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Home
-hero_title: Vision Maths Lab
-hero_subtitle: Library of Sampling Methods
+hero_title: Library of Sampling Methods
+# hero_subtitle: Library of Sampling Methods
 hero_description: We develop and study sampling methods for machine learning, Bayesian inference, and computational science.
 hero_rotate: true
 ---

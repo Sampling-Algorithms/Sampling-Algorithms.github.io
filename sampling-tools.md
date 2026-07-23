@@ -10,108 +10,153 @@ permalink: /sampling-tools/
 {% assign advanced_tools = site.tools | where_exp: "tool", "tool.path contains '/advanced/'" | sort: "order" %}
 {% assign total_tools = basic_tools.size | plus: mcmc_tools.size | plus: advanced_tools.size %}
 
-{% if total_tools == 0 %}
-  <div class="tools-empty-state">
-    <h2>This page is empty for now</h2>
+<div class="sampling-tools-page">
+  {% if total_tools == 0 %}
+  <section class="tools-empty-state" aria-labelledby="empty-tools-title">
+    <h2 id="empty-tools-title">This page is empty for now</h2>
     <p>New sampling tools will be added soon. Please check back later.</p>
-  </div>
-{% endif %}
-
-{% assign tool_sections = "Basic Methods|Markov Chain Monte Carlo (MCMC)|Advanced Methods" | split: "|" %}
-{% for section_title in tool_sections %}
-  {% case section_title %}
-    {% when "Basic Methods" %}{% assign section_tools = basic_tools %}
-    {% when "Markov Chain Monte Carlo (MCMC)" %}{% assign section_tools = mcmc_tools %}
-    {% when "Advanced Methods" %}{% assign section_tools = advanced_tools %}
-  {% endcase %}
-  {% if section_tools.size > 0 %}
-<div class="tools-category">
-  <h2>{{ section_title }}</h2>
-  <div class="tools-grid">
-    {% for tool in section_tools %}
-    <div class="tool-card">
-      <h3>{{ tool.title }}</h3>
-      <p>{{ tool.description }}</p>
-      <a href="{{ tool.url | relative_url }}" class="tool-link">Learn More &rarr;</a>
-    </div>
+  </section>
+  {% else %}
+    {% assign tool_sections = "Basic Methods|Markov Chain Monte Carlo (MCMC)|Advanced Methods" | split: "|" %}
+    {% for section_title in tool_sections %}
+      {% case section_title %}
+        {% when "Basic Methods" %}
+          {% assign section_tools = basic_tools %}
+          {% assign section_id = "basic-methods" %}
+        {% when "Markov Chain Monte Carlo (MCMC)" %}
+          {% assign section_tools = mcmc_tools %}
+          {% assign section_id = "mcmc-methods" %}
+        {% when "Advanced Methods" %}
+          {% assign section_tools = advanced_tools %}
+          {% assign section_id = "advanced-methods" %}
+      {% endcase %}
+      {% if section_tools.size > 0 %}
+  <section class="tools-category" aria-labelledby="{{ section_id }}">
+    <h2 id="{{ section_id }}">{{ section_title }}</h2>
+    <ul class="tools-list">
+      {% for tool in section_tools %}
+      <li class="tool-item">
+        <article class="tool-content">
+          <h3>{{ tool.title }}</h3>
+          <p>{{ tool.description }}</p>
+          <a href="{{ tool.url | relative_url }}" class="tool-link">
+            Read More
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </article>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+      {% endif %}
     {% endfor %}
-  </div>
-</div>
   {% endif %}
-{% endfor %}
+</div>
 
 <style>
-.tools-empty-state {
-  margin: 3rem 0;
-  padding: 2rem;
-  text-align: center;
-  font-family: inherit;
+.sampling-tools-page {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+  padding: 28px;
 }
 
-.tools-empty-state h2 {
-  margin: 0 0 1rem;
-  color: #333;
+.tools-empty-state {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.tools-empty-state h2,
+.tools-category h2 {
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  font-size: 1.35rem;
+  font-weight: 700;
 }
 
 .tools-empty-state p {
-  margin: 0;
-  color: #000;
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
-.tools-category {
-  margin: 3rem 0;
-  font-family: inherit;
+.tools-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.tools-category h2 {
-  color: #333;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 0 solid #0f111a;
-  font-family: inherit;
+.tool-item {
+  margin: 0;
+  padding: 8px 0;
 }
 
-.tools-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  font-family: inherit;
+.tool-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
 }
 
-.tool-card {
-  /* background: white; */
-  padding: 1.5rem;
-  /* border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
-  transition: transform 0.3s ease;
-  font-family: inherit;
+.tool-content h3 {
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
-.tool-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
-}
-
-.tool-card h3 {
-  color: #000;
-  margin-bottom: 1rem;
-}
-
-.tool-card p {
-  color: #000;
-  margin-bottom: 1.5rem;
+.tool-content p {
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
 .tool-link {
-  color: #1120f5;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: var(--accent);
+  font-weight: 600;
   text-decoration: none;
-  font-weight: 500;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
-.active {
-  color: #1120f5;
-  font-weight: 600;
+.tool-link:hover {
+  color: var(--text-primary);
+  background: var(--accent-bg);
+  transform: translateX(3px);
+}
+
+.tool-link:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .sampling-tools-page {
+    padding: 20px;
+  }
+
+  .tool-content {
+    align-items: stretch;
+  }
+
+  .tool-link {
+    align-self: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tool-link {
+    transition: none;
+  }
+
+  .tool-link:hover {
+    transform: none;
+  }
 }
 </style>
