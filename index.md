@@ -67,7 +67,7 @@ hero_rotate: true
   flex-direction: column;
   gap: 5px;
   width: 100%;
-  margin: 32px auto 0;
+  margin: 10px auto 0;
   padding: 10px;
   background: var(--page-bg);
   /* border-radius: 28px;
@@ -91,7 +91,7 @@ hero_rotate: true
 }
 
 .about-content h3 {
-  margin: 20px 0 8px;
+  margin: 6px 0 8px;
   color: var(--text-primary);
   font-size: 1.1rem;
   font-weight: 700;
@@ -113,7 +113,7 @@ hero_rotate: true
 }
 
 .post-item {
-  padding: 14px 0;
+  padding: 2px 0;
 }
 
 .post-item h3 {
