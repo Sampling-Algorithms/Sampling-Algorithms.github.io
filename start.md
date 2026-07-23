@@ -150,19 +150,19 @@ title: Get Started with Sampling
   border-color: #667eea;
 } */
 
-.step-number {
+/* .step-number {
   width: 40px;
-  height: 40px;
+  height: 40px; */
   /* background: #667eea;
   color: white; */
   /* border-radius: 50%; */
   /* display: flex; */
-  align-items: center;
+  /* align-items: center;
   justify-content: center;
   font-weight: bold;
   font-size: 1.2rem;
   flex-shrink: 0;
-}
+} */
 
 .step-content {
   flex: 1;
@@ -227,12 +227,12 @@ title: Get Started with Sampling
     align-self: center;
   }
   
-  .step-icon {
+  /* .step-icon {
     margin-bottom: 0.5rem;
-  }
+  } */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .learning-path {
     padding: 20px;
   }
