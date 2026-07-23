@@ -5,7 +5,6 @@ order: 2
 # icon: "📊"
 ---
 
-
 # Probability Refresher
 
 Before studying sampling algorithms such as Monte Carlo methods, Markov Chain Monte Carlo (MCMC), Langevin dynamics, Hamiltonian Monte Carlo, Sequential Monte Carlo, or Diffusion Models, it is important to understand the language of probability.
