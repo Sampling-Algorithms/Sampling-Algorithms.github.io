@@ -9,7 +9,7 @@ hero_rotate: true
 <div class="poster-container">
   <main class="main-content">
     <section class="section about-section">
-      <h2 class="section-title">About Sampling Tools</h2>
+      <h1 class="section-title">About Sampling Tools</h1>
       <div class="about-content">
         <p>
           Sampling Tools is an educational library for learning, comparing, and applying
@@ -40,7 +40,7 @@ hero_rotate: true
       </div>
     </section>
 
-    <section class="section">
+    <!-- <section class="section">
       <h2 class="section-title">Quick Links</h2>
       <div class="flow">
         <a href="{{ site.baseurl }}/start" class="flow-step">
@@ -54,10 +54,10 @@ hero_rotate: true
         </a>
         <!-- <a href="{{ site.baseurl }}/projects" class="flow-step">Projects</a> -->
       </div>
-    </section>
+    </section> -->
 
     <section class="section">
-      <h2 class="section-title">Latest Tutorials</h2>
+      <h1 class="section-title">Latest Tutorials</h1>
       <div class="latest-list">
         {% for post in site.posts limit:3 %}
         <article class="post-item">

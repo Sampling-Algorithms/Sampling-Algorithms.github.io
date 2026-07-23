@@ -69,7 +69,7 @@ title: Get Started with Sampling
 }
 
 .learning-path {
-  max-width: 100%;
+  max-width: 920px;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -82,7 +82,7 @@ title: Get Started with Sampling
 }
 
 .learning-path-introduction {
-  width: 100%;
+  max-width: 920px;
   max-width: none;
   margin: 1.5rem auto 2rem;
   color: #333;
@@ -192,7 +192,7 @@ title: Get Started with Sampling
 
 /* Progress Tracker */
 .progress-tracker {
-  max-width: 100%;
+  max-width: 920px;
   margin: 3rem auto;
   padding: 2rem;
   background: white;
@@ -215,7 +215,7 @@ title: Get Started with Sampling
 }
 
 .progress-bar {
-  height: 100%;
+  max-width: 920px;
   background: linear-gradient(90deg, #667eea, #764ba2);
   border-radius: 5px;
   transition: width 0.3s ease;

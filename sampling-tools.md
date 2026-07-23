@@ -45,9 +45,6 @@ permalink: /sampling-tools/
   margin: 3rem 0;
   padding: 2rem;
   text-align: center;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   font-family: inherit;
 }
 
@@ -85,8 +82,8 @@ permalink: /sampling-tools/
 .tool-card {
   background: white;
   padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
   transition: transform 0.3s ease;
   font-family: inherit;
 }
