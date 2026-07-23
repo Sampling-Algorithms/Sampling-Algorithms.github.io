@@ -22,7 +22,6 @@ title: Get Started with Sampling
       knowledge you need as you progress.
     </p>
   </section>
-  <p class="path-description">Follow these steps in order to build a solid foundation</p>
   
   <div class="path-steps">
     {% assign tutorials = site.start | sort: 'order' %}
@@ -88,12 +87,6 @@ title: Get Started with Sampling
   margin: 1.5rem auto 2rem;
   color: #333;
   line-height: 1.7;
-
-  display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
-  background: white;
-  padding: 1.5rem;
 }
 
 .learning-path-introduction h3 {
