@@ -59,7 +59,7 @@ hero_rotate: true
     <section class="section">
       <h2 class="section-title">Latest Tutorials</h2>
       <div class="latest-list">
-        {% for post in site.posts limit:5 %}
+        {% for post in site.posts limit:3 %}
         <article class="post-item">
           <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
           <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
@@ -188,8 +188,8 @@ hero_rotate: true
   .post-item {
     padding: 14px;
     background: var(--page-bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
+    /* border: 1px solid var(--border);
+    border-radius: 12px; */
   }
 
   .post-item h3 {
