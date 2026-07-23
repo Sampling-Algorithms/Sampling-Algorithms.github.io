@@ -47,6 +47,7 @@ title: Get Started with Sampling
   gap: 5px;
   width: 100%;
   padding: 10px;
+  background: var(--page-bg);
 }
 
 .learning-path-introduction {

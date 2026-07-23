@@ -2,12 +2,6 @@
 layout: default
 ---
 <article class="start-tutorial">
-  <!-- <header class="tutorial-header">
-    <div class="tutorial-icon">{{ page.icon }}</div>
-    <h1>{{ page.title }}</h1>
-    <p class="tutorial-description">{{ page.description }}</p>
-  </header> -->
-  
   <div class="tutorial-content">
     {{ content }}
   </div>
@@ -20,7 +14,7 @@ layout: default
         {% unless forloop.first %}
           {% assign prev_index = forloop.index0 | minus: 1 %}
           {% assign prev_tutorial = tutorials[prev_index] %}
-          <a href="{{ site.baseurl }}{{ prev_tutorial.url }}" class="prev-tutorial">
+          <a href="{{ prev_tutorial.url | relative_url }}" class="prev-tutorial">
             ← {{ prev_tutorial.title }}
           </a>
         {% endunless %}
@@ -28,7 +22,7 @@ layout: default
         {% unless forloop.last %}
           {% assign next_index = forloop.index0 | plus: 1 %}
           {% assign next_tutorial = tutorials[next_index] %}
-          <a href="{{ site.baseurl }}{{ next_tutorial.url }}" class="next-tutorial">
+          <a href="{{ next_tutorial.url | relative_url }}" class="next-tutorial">
             {{ next_tutorial.title }} →
           </a>
         {% endunless %}
@@ -39,40 +33,30 @@ layout: default
 
 <style>
 .start-tutorial {
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
-  /* background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); */
-}
-
-.tutorial-header {
-  text-align: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.tutorial-icon {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
-
-.tutorial-header h1 {
-  color: #333;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.tutorial-description {
-  color: #666;
-  font-size: 1.1rem;
+  color: var(--text-secondary);
+  background: var(--page-bg);
 }
 
 .tutorial-content {
   line-height: 1.8;
-  color: #333;
+  color: var(--text-secondary);
+}
+
+.tutorial-content h1,
+.tutorial-content h2,
+.tutorial-content h3,
+.tutorial-content h4,
+.tutorial-content h5,
+.tutorial-content h6 {
+  color: var(--text-primary);
+}
+
+.tutorial-content p,
+.tutorial-content li {
+  color: var(--text-secondary);
 }
 
 .tutorial-content ul,
@@ -88,22 +72,60 @@ layout: default
 .tutorial-navigation {
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
   margin-top: 3rem;
   padding-top: 1rem;
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid var(--border);
 }
 
 .prev-tutorial, .next-tutorial {
   text-decoration: none;
   padding: 0.8rem 1.5rem;
-  background: #f8f9fa;
-  color: #2e2f3843;
-  border-radius: 1px;
-  transition: all 0.3s ease;
+  background: var(--page-bg-alt);
+  color: var(--accent);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-weight: 600;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.next-tutorial {
+  margin-left: auto;
 }
 
 .prev-tutorial:hover, .next-tutorial:hover {
-  background: #2e2f3843;
-  color: white;
+  color: var(--text-primary);
+  background: var(--accent-bg);
+  border-color: var(--accent);
+}
+
+.prev-tutorial:focus-visible,
+.next-tutorial:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .start-tutorial {
+    padding: 10px;
+  }
+
+  .tutorial-navigation {
+    flex-direction: column;
+  }
+
+  .prev-tutorial,
+  .next-tutorial {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .prev-tutorial,
+  .next-tutorial {
+    transition: none;
+  }
 }
 </style>
