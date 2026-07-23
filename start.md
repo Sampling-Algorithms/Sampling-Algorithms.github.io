@@ -71,7 +71,7 @@ title: Get Started with Sampling
 .learning-path {
   max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 28px;
 }
 
 .learning-path h2 {
@@ -112,7 +112,7 @@ title: Get Started with Sampling
 
 .step {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.rem;
   /* align-items: flex-start; */
   padding: 1.5rem;
   /* border-radius: 10px; */
@@ -121,11 +121,11 @@ title: Get Started with Sampling
   /* border: 1px solid transparent; */
 }
 
-.step:hover {
+/* .step:hover {
   transform: translateX(10px);
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
   border-color: #667eea;
-}
+} */
 
 .step-number {
   width: 40px;
@@ -188,41 +188,6 @@ title: Get Started with Sampling
   font-size: 0.8rem;
 }
 
-/* Progress Tracker */
-.progress-tracker {
-  max-width: 920px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.progress-tracker h3 {
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-.progress-bar-container {
-  height: 10px;
-  border-radius: 5px;
-  overflow: hidden;
-  margin-bottom: 0.5rem;
-}
-
-.progress-bar {
-  max-width: 920px;
-  background: linear-gradient(90deg, #667eea, #764ba2);
-  border-radius: 5px;
-  transition: width 0.3s ease;
-}
-
-.progress-text {
-  color: #666;
-  font-size: 0.9rem;
-}
-
 .active {
   color: #667eea;
   font-weight: 600;
@@ -241,6 +206,12 @@ title: Get Started with Sampling
   
   .step-icon {
     margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .learning-path {
+    padding: 20px;
   }
 }
 </style>
