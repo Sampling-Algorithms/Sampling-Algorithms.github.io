@@ -6,272 +6,146 @@ title: Get Started with Sampling
 ---
 
 <div class="learning-path">
-  <main class="main-content">
-    <section class="learning-path-introduction" aria-labelledby="learning-path-about-title">
-      <h3 id="learning-path-about-title">Building the knowledge to design samplers</h3>
-      <p>
-        Building reliable sampling methods requires some background in probability,
-        probability distributions, statistics, numerical computation, and programming.
-        These ideas help explain how a sampler works, why it targets the correct
-        distribution, and how to recognise convergence problems or biased results.
-      </p>
-      <p>
-        This page provides the tools needed to develop that foundation. The learning path
-        starts with the central ideas behind sampling, refreshes the essential probability
-        concepts, and then moves towards implementing and evaluating practical algorithms.
-        You do not need to master every topic before beginning—each lesson introduces the
-        knowledge you need as you progress.
-      </p>
-    </section>
-    
-    <div class="path-steps">
-      {% assign tutorials = site.start | sort: 'order' %}
-      {% for tutorial in tutorials %}
-      <div class="step">
-        <!-- <div class="step-number">{{ tutorial.order }}</div> -->
-        <div class="step-content">
-          <div class="step-icon">{{ tutorial.icon }}</div>
-          <h2>{{ tutorial.title }}</h2>
-          <p>{{ tutorial.description }}</p>
-          <a href="{{ site.baseurl }}{{ tutorial.url }}" class="step-link">
-            Start 
-            <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </main>
+  <section class="learning-path-introduction" aria-labelledby="learning-path-about-title">
+    <h2 id="learning-path-about-title">Building the knowledge to design samplers</h2>
+    <p>
+      Building reliable sampling methods requires some background in probability,
+      probability distributions, statistics, numerical computation, and programming.
+      These ideas help explain how a sampler works, why it targets the correct
+      distribution, and how to recognise convergence problems or biased results.
+    </p>
+    <p>
+      This page provides the tools needed to develop that foundation. The learning path
+      starts with the central ideas behind sampling, refreshes the essential probability
+      concepts, and then moves towards implementing and evaluating practical algorithms.
+      You do not need to master every topic before beginning—each lesson introduces the
+      knowledge you need as you progress.
+    </p>
+  </section>
+
+  {% assign tutorials = site.start | sort: "order" %}
+  <ol class="path-steps" aria-label="Sampling tutorials">
+    {% for tutorial in tutorials %}
+    <li class="step">
+      <article class="step-content">
+        <h3>{{ tutorial.title }}</h3>
+        <p>{{ tutorial.description }}</p>
+        <a href="{{ tutorial.url | relative_url }}" class="step-link">
+          Start
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </article>
+    </li>
+    {% endfor %}
+  </ol>
 </div>
 
-<!-- Progress Tracker
-<div class="progress-tracker">
-  <h3>Your Progress</h3>
-  <div class="progress-bar-container">
-    <div class="progress-bar" style="width: 0%" id="progress-bar"></div>
-  </div>
-  <p class="progress-text">0/{{ site.start | size }} completed</p>
-</div> -->
-
 <style>
-.page-header {
-  text-align: center;
-  margin: 3rem 0;
-}
-
-.page-header h1 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-.page-header p {
-  font-size: 1.2rem;
-  color: #666;
-}
-
 .learning-path {
   display: flex;
   flex-direction: column;
   gap: 22px;
+  width: 100%;
   padding: 28px;
 }
 
-.learning-path h2 {
-  text-align: center;
-  margin-bottom: 0.5rem;
-  color: #333;
-  font-size: 2rem;
-}
-
-/* .learning-path-introduction {
-  max-width: 100%;
-  margin: 1.5rem auto 2rem; 
-  color: #333;
+.learning-path-introduction {
+  color: var(--text-secondary);
   line-height: 1.7;
-} */
+}
 
-.learning-path-introduction h3 {
+.learning-path-introduction h2 {
   margin-bottom: 0.75rem;
-  color: #333;
+  color: var(--text-primary);
   font-size: 1.35rem;
+  font-weight: 700;
 }
 
-.learning-path-introduction p {
-  margin-bottom: 0.85rem;
-}
-
-.path-description {
-  text-align: center;
-  color: #666;
-  margin-bottom: 3rem;
+.learning-path-introduction p + p {
+  margin-top: 0.85rem;
 }
 
 .path-steps {
   display: flex;
   flex-direction: column;
-  gap: 0;
-
+  gap: 6px;
+  margin: 0;
   padding: 0;
-  background: transparent;
-  border-radius: 0;
+  list-style: none;
 }
-
-.section {
-    padding: 0;
-    background: transparent;
-    border-radius: 0;
-  }
-
-.main-content {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-    padding: 28px;
-  }
 
 .step {
-  padding: 0;
-  background: transparent;
-  border-radius: 0;
-  /* display: flex;
-  gap: 1.rem; */
-  /* align-items: flex-start; */
-  /* padding: 1.5rem; */
-  /* border-radius: 10px; */
-  /* box-shadow: 0 2px 8px rgba(0,0,0,0.1); */
-  /* transition: all 0.3s ease; */
-  /* border: 1px solid transparent; */
+  margin: 0;
+  padding: 8px 0;
 }
-
-/* .step:hover {
-  transform: translateX(10px);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
-  border-color: #667eea;
-} */
-
-/* .step-number {
-  width: 40px;
-  height: 40px; */
-  /* background: #667eea;
-  color: white; */
-  /* border-radius: 50%; */
-  /* display: flex; */
-  /* align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-  flex-shrink: 0;
-} */
 
 .step-content {
-  flex: 1;
   display: flex;
   flex-direction: column;
-}
-
-.step-icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  align-items: flex-start;
+  gap: 6px;
 }
 
 .step-content h3 {
-  color: #333;
-  margin-bottom: 0.5rem;
+  color: var(--text-primary);
   font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
 .step-content p {
-  color: #666;
-  /* margin-bottom: 1rem; */
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
 .step-link {
-  align-self: flex-start;
-  color: #a3afe2;
-  text-decoration: none;
-  font-weight: 500;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  /* background: #f0f4ff; */
   border-radius: 5px;
-  transition: all 0.3s ease;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
 .step-link:hover {
-  background: #9fade9;
-  /* color: white; */
-  gap: 1rem;
+  color: var(--text-primary);
+  background: var(--accent-bg);
+  transform: translateX(3px);
+}
+
+.step-link:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .step-link i {
   font-size: 0.8rem;
 }
 
-.active {
-  color: #667eea;
-  font-weight: 600;
-}
-
 @media (max-width: 600px) {
-  .step {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .step-link {
-    align-self: center;
-  }
-  
-  /* .step-icon {
-    margin-bottom: 0.5rem;
-  } */
-}
-
-@media (max-width: 900px) {
   .learning-path {
     padding: 20px;
   }
 
-  .main-content {
-    padding: 20px
+  .step-content {
+    align-items: stretch;
   }
 
+  .step-link {
+    align-self: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .step-link {
+    transition: none;
+  }
+
+  .step-link:hover {
+    transform: none;
+  }
 }
 </style>
-
-<script>
-// Simple progress tracker using localStorage
-document.addEventListener('DOMContentLoaded', function() {
-  const totalSteps = {{ site.start | size }};
-  let completed = 0;
-  
-  // Check which tutorials are completed
-  document.querySelectorAll('.step').forEach((step, index) => {
-    const tutorialUrl = step.querySelector('.step-link').getAttribute('href');
-    if (localStorage.getItem('completed_' + tutorialUrl) === 'true') {
-      step.classList.add('completed');
-      completed++;
-    }
-  });
-  
-  // Update progress bar
-  const progressPercent = (completed / totalSteps) * 100;
-  document.getElementById('progress-bar').style.width = progressPercent + '%';
-  document.querySelector('.progress-text').textContent = 
-    `${completed}/${totalSteps} completed`;
-  
-  // Mark as completed when clicking start
-  document.querySelectorAll('.step-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-      // Don't prevent default - we want to navigate
-      const tutorialUrl = this.getAttribute('href');
-      localStorage.setItem('completed_' + tutorialUrl, 'true');
-    });
-  });
-});
-</script>
