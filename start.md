@@ -69,7 +69,7 @@ title: Get Started with Sampling
 }
 
 .learning-path {
-  max-width: 920px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -82,8 +82,7 @@ title: Get Started with Sampling
 }
 
 .learning-path-introduction {
-  max-width: 920px;
-  max-width: none;
+  max-width: 100%;
   margin: 1.5rem auto 2rem;
   color: #333;
   line-height: 1.7;
@@ -114,13 +113,12 @@ title: Get Started with Sampling
 .step {
   display: flex;
   gap: 1.5rem;
-  align-items: flex-start;
-  background: white;
+  /* align-items: flex-start; */
   padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-  border: 1px solid transparent;
+  /* border-radius: 10px; */
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.1); */
+  /* transition: all 0.3s ease; */
+  /* border: 1px solid transparent; */
 }
 
 .step:hover {
@@ -208,7 +206,6 @@ title: Get Started with Sampling
 
 .progress-bar-container {
   height: 10px;
-  background: #f0f0f0;
   border-radius: 5px;
   overflow: hidden;
   margin-bottom: 0.5rem;
@@ -231,7 +228,7 @@ title: Get Started with Sampling
   font-weight: 600;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 920px) {
   .step {
     flex-direction: column;
     align-items: center;
