@@ -69,9 +69,14 @@ title: Get Started with Sampling
 }
 
 .learning-path {
-  max-width: 100%;
-  /* margin: 0 auto; */
+  /* max-width: 100%;
+   margin: 0 auto;
   margin: 32px auto 0;
+  padding: 28px; */
+
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
   padding: 28px;
 }
 
@@ -192,6 +197,13 @@ title: Get Started with Sampling
   transition: all 0.3s ease;
 }
 
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 28px;
+}
+
 .step-link:hover {
   background: #667eea;
   /* color: white; */
@@ -227,6 +239,7 @@ title: Get Started with Sampling
   .learning-path {
     padding: 20px;
   }
+
 }
 </style>
 
