@@ -65,13 +65,13 @@ hero_rotate: true
 .home-page {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 5px;
   width: 100%;
   margin: 32px auto 0;
   padding: 28px;
   background: var(--page-bg);
-  border-radius: 28px;
-  box-shadow: 0 8px 32px rgba(58, 143, 183, 0.12);
+  /* border-radius: 28px;
+  box-shadow: 0 8px 32px rgba(58, 143, 183, 0.12); */
 }
 
 .home-section-title {
@@ -109,7 +109,7 @@ hero_rotate: true
 .latest-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 2px;
 }
 
 .post-item {

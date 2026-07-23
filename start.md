@@ -44,7 +44,7 @@ title: Get Started with Sampling
 .learning-path {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 5px;
   width: 100%;
   padding: 28px;
 }
@@ -68,7 +68,7 @@ title: Get Started with Sampling
 .path-steps {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 2px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -83,7 +83,7 @@ title: Get Started with Sampling
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 6px;
+  gap: 2px;
 }
 
 .step-content h3 {
