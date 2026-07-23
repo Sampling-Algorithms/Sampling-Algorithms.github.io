@@ -68,7 +68,7 @@ hero_rotate: true
   gap: 5px;
   width: 100%;
   margin: 10px auto 0;
-  padding: 10px;
+  padding: 2px;
   background: var(--page-bg);
   /* border-radius: 28px;
   box-shadow: 0 8px 32px rgba(58, 143, 183, 0.12); */
@@ -113,11 +113,11 @@ hero_rotate: true
 }
 
 .post-item {
-  padding: 2px 0;
+  padding: 1px 0;
 }
 
 .post-item h3 {
-  margin-bottom: 6px;
+  margin-bottom: 3px;
   font-size: 1.2rem;
   line-height: 1.3;
 }
