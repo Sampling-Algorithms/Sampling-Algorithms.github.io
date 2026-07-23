@@ -68,7 +68,7 @@ hero_rotate: true
   gap: 5px;
   width: 100%;
   margin: 32px auto 0;
-  padding: 28px;
+  padding: 10px;
   background: var(--page-bg);
   /* border-radius: 28px;
   box-shadow: 0 8px 32px rgba(58, 143, 183, 0.12); */
@@ -151,7 +151,7 @@ hero_rotate: true
 @media (max-width: 600px) {
   .home-page {
     margin-top: 0;
-    padding: 20px;
+    padding: 10px;
     border-radius: 0;
   }
 }
