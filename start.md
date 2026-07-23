@@ -6,7 +6,6 @@ title: Get Started with Sampling
 ---
 
 <div class="learning-path">
-  <h2>Learning Path</h2>
   <section class="learning-path-introduction" aria-labelledby="learning-path-about-title">
     <h3 id="learning-path-about-title">Building the knowledge to design samplers</h3>
     <p>
@@ -84,10 +83,17 @@ title: Get Started with Sampling
 }
 
 .learning-path-introduction {
-  max-width: 900px;
+  width: 100%;
+  max-width: none;
   margin: 1.5rem auto 2rem;
   color: #333;
   line-height: 1.7;
+
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  background: white;
+  padding: 1.5rem;
 }
 
 .learning-path-introduction h3 {
