@@ -39,6 +39,29 @@ hero_rotate: true
     </div>
   </section>
 
+  {% if site.soon.size > 0 %}
+  {% assign coming_soon_items = site.soon | sort: "date" | reverse %}
+  <section class="home-section" aria-labelledby="coming-soon">
+    <h2 id="coming-soon" class="home-section-title">Coming Soon!!</h2>
+    <div class="latest-list">
+      {% for item in coming_soon_items %}
+      {% assign item_summary = item.description | default: item.excerpt %}
+      <article class="post-item">
+        <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+        {% if item.date %}
+        <time class="post-meta" datetime="{{ item.date | date_to_xmlschema }}">
+          {{ item.date | date: "%B %d, %Y" }}
+        </time>
+        {% endif %}
+        {% if item_summary %}
+        <p>{{ item_summary | strip_html | truncatewords: 25 }}</p>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
   <section class="home-section" aria-labelledby="latest-tutorials">
     <h2 id="latest-tutorials" class="home-section-title">Latest Tutorials</h2>
     <div class="latest-list">

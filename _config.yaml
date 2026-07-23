@@ -27,6 +27,9 @@ collections:
   tools:
     output: true
     permalink: /tools/:path/
+  soon:
+    output: true
+    permalink: /soon/:name/
   tutorials:
     output: true
     permalink: /:collection/:name
@@ -45,6 +48,11 @@ defaults:
     values:
       layout: "post"
       author: "Joel & Charlesquin"
+  - scope:
+      path: ""
+      type: "soon"
+    values:
+      layout: "default"
   - scope:
       path: ""
     values:
