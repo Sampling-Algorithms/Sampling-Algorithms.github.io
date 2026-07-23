@@ -11,6 +11,22 @@ permalink: /sampling-tools/
 {% assign total_tools = basic_tools.size | plus: mcmc_tools.size | plus: advanced_tools.size %}
 
 <div class="sampling-tools-page">
+  <section class="tools-introduction" aria-label="Introduction to sampling methods">
+    <p>
+      Sampling methods are computational techniques for generating representative values
+      from probability distributions. They allow us to study complex models, estimate
+      quantities that cannot be calculated analytically, quantify uncertainty, and perform
+      inference in statistics, machine learning, and computational science.
+    </p>
+    <p>
+      This page brings together the sampling methods developed in this library. The methods
+      are organised from foundational techniques to Markov chain Monte Carlo and more
+      advanced approaches. Each entry provides a concise overview and a link to a detailed
+      explanation, helping you understand how the method works, when it is useful, and how
+      to apply it in practice.
+    </p>
+  </section>
+
   {% if total_tools == 0 %}
   <section class="tools-empty-state" aria-labelledby="empty-tools-title">
     <h2 id="empty-tools-title">This page is empty for now</h2>
@@ -57,21 +73,30 @@ permalink: /sampling-tools/
 .sampling-tools-page {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 2px;
   width: 100%;
-  padding: 28px;
+  padding: 2px;
+}
+
+.tools-introduction {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.tools-introduction p + p {
+  margin-top: 0.5rem;
 }
 
 .tools-empty-state {
-  padding: 2rem 0;
+  padding: 1rem 0;
   text-align: center;
 }
 
 .tools-empty-state h2,
 .tools-category h2 {
-  margin-bottom: 0.75rem;
+  margin-bottom: 6px;
   color: var(--text-primary);
-  font-size: 1.35rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -81,9 +106,9 @@ permalink: /sampling-tools/
 }
 
 .tools-list {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 8px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -91,14 +116,25 @@ permalink: /sampling-tools/
 
 .tool-item {
   margin: 0;
-  padding: 8px 0;
+  padding: 0;
 }
 
 .tool-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 6px;
+  gap: 4px;
+  height: 100%;
+  padding: 10px;
+  background: var(--page-bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.tool-content:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }
 
 .tool-content h3 {
@@ -116,12 +152,13 @@ permalink: /sampling-tools/
 .tool-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
   border-radius: 5px;
   color: var(--accent);
   font-weight: 600;
   text-decoration: none;
+  margin-top: auto;
   transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
@@ -138,7 +175,7 @@ permalink: /sampling-tools/
 
 @media (max-width: 600px) {
   .sampling-tools-page {
-    padding: 20px;
+    padding: 2px;
   }
 
   .tool-content {
@@ -151,10 +188,12 @@ permalink: /sampling-tools/
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .tool-content,
   .tool-link {
     transition: none;
   }
 
+  .tool-content:hover,
   .tool-link:hover {
     transform: none;
   }
