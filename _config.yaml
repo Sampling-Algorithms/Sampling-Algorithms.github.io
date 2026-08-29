@@ -50,6 +50,11 @@ defaults:
       author: "Joel & Charlesquin"
   - scope:
       path: ""
+      type: "tools"
+    values:
+      layout: "tool"
+  - scope:
+      path: ""
       type: "soon"
     values:
       layout: "default"

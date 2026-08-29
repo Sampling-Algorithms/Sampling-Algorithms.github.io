@@ -114,15 +114,6 @@ hero_rotate: true
   font-weight: 700;
 }
 
-.about-content ul {
-  margin: 0 0 16px;
-  padding-left: 24px;
-}
-
-.about-content li + li {
-  margin-top: 7px;
-}
-
 .latest-list {
   display: flex;
   flex-direction: column;

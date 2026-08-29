@@ -1,0 +1,125 @@
+---
+layout: default
+---
+<article class="tool-page">
+  <div class="tool-page-content">
+    {{ content }}
+  </div>
+
+  <!-- Navigation between tool pages, ordered Basic Methods -> MCMC -> Advanced -->
+  <div class="tool-navigation">
+    {% assign basic_tools = site.tools | where_exp: "tool", "tool.path contains '/basics/'" | sort: "order" %}
+    {% assign mcmc_tools = site.tools | where_exp: "tool", "tool.path contains '/mcmcs/'" | sort: "order" %}
+    {% assign advanced_tools = site.tools | where_exp: "tool", "tool.path contains '/advanced/'" | sort: "order" %}
+    {% assign all_tools = basic_tools | concat: mcmc_tools | concat: advanced_tools %}
+
+    {% for tool in all_tools %}
+      {% if tool.url == page.url %}
+        {% unless forloop.first %}
+          {% assign prev_index = forloop.index0 | minus: 1 %}
+          {% assign prev_tool = all_tools[prev_index] %}
+          <a href="{{ prev_tool.url | relative_url }}" class="prev-tool">
+            ← {{ prev_tool.title }}
+          </a>
+        {% endunless %}
+
+        {% unless forloop.last %}
+          {% assign next_index = forloop.index0 | plus: 1 %}
+          {% assign next_tool = all_tools[next_index] %}
+          <a href="{{ next_tool.url | relative_url }}" class="next-tool">
+            {{ next_tool.title }} →
+          </a>
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</article>
+
+<style>
+.tool-page {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  color: var(--text-secondary);
+  background: var(--page-bg);
+}
+
+.tool-page-content {
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.tool-page-content h1,
+.tool-page-content h2,
+.tool-page-content h3,
+.tool-page-content h4,
+.tool-page-content h5,
+.tool-page-content h6 {
+  color: var(--text-primary);
+}
+
+.tool-page-content p,
+.tool-page-content li {
+  color: var(--text-secondary);
+}
+
+.tool-navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.prev-tool, .next-tool {
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  background: var(--page-bg-alt);
+  color: var(--accent);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-weight: 600;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.next-tool {
+  margin-left: auto;
+}
+
+.prev-tool:hover, .next-tool:hover {
+  color: var(--text-primary);
+  background: var(--accent-bg);
+  border-color: var(--accent);
+}
+
+.prev-tool:focus-visible,
+.next-tool:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .tool-page {
+    padding: 10px;
+  }
+
+  .tool-navigation {
+    flex-direction: column;
+  }
+
+  .prev-tool,
+  .next-tool {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .prev-tool,
+  .next-tool {
+    transition: none;
+  }
+}
+</style>
