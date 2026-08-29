@@ -105,16 +105,18 @@ hero_description: Explore real-world applications of sampling algorithms across 
 }
 
 .example-card {
-  background: white;
+  background: var(--page-bg-alt);
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-sm);
   transition: all 0.3s ease;
 }
 
 .example-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(102, 126, 234, 0.2);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(23, 184, 166, 0.35);
 }
 
 .example-icon {
@@ -123,13 +125,13 @@ hero_description: Explore real-world applications of sampling algorithms across 
 }
 
 .example-card h2 {
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
 
 .example-card p {
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -142,11 +144,11 @@ hero_description: Explore real-world applications of sampling algorithms across 
 }
 
 .badge {
-  background: #f0f0f0;
+  background: var(--page-bg);
   padding: 0.3rem 1rem;
   border-radius: 20px;
   font-size: 0.85rem;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .example-links {
@@ -156,7 +158,7 @@ hero_description: Explore real-world applications of sampling algorithms across 
 
 .example-button {
   padding: 0.5rem 1rem;
-  background: #667eea;
+  background: var(--accent);
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -165,21 +167,21 @@ hero_description: Explore real-world applications of sampling algorithms across 
 }
 
 .example-button:hover {
-  background: #5a67d8;
+  background: var(--accent-dark);
 }
 
 .example-button.secondary {
   background: transparent;
-  color: #667eea;
-  border: 1px solid #667eea;
+  color: var(--accent);
+  border: 1px solid var(--accent);
 }
 
 .example-button.secondary:hover {
-  background: #f8f9fa;
+  background: var(--page-bg);
 }
 
 .active {
-  color: #667eea;
+  color: var(--accent);
   font-weight: 600;
 }
 </style>

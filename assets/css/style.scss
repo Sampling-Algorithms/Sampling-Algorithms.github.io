@@ -5,16 +5,16 @@
 
 /* Global Styles */
 :root {
-  --primary-color: #28a745;
-  --secondary-color: #6c757d;
-  --accent-color: #0366d6;
-  --gradient-start: #667eea;
-  --gradient-end: #764ba2;
-  --bg-light: #f8f9fa;
-  --border-color: #e1e4e8;
-  --text-color: #24292e;
-  --shadow: 0 4px 6px rgba(0,0,0,0.1);
-  --shadow-hover: 0 6px 12px rgba(0,0,0,0.15);
+  --primary-color: #17b8a6;
+  --secondary-color: #55607a;
+  --accent-color: #17b8a6;
+  --gradient-start: #101c36;
+  --gradient-end: #070c17;
+  --bg-light: #f7f9fc;
+  --border-color: #e2e8f0;
+  --text-color: #0f172a;
+  --shadow: 0 4px 6px rgba(10, 20, 40, 0.08);
+  --shadow-hover: 0 6px 12px rgba(10, 20, 40, 0.14);
 }
 
 * {

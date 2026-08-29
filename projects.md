@@ -112,29 +112,31 @@ title: Projects
 }
 
 .project-card {
-  background: white;
+  background: var(--page-bg-alt);
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-sm);
   transition: all 0.3s ease;
   position: relative;
 }
 
 .project-card.featured {
   grid-column: span 2;
-  border: 2px solid #667eea;
+  border: 2px solid var(--accent);
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(102, 126, 234, 0.2);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(23, 184, 166, 0.35);
 }
 
 .project-tag {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: #667eea;
+  background: var(--accent);
   color: white;
   padding: 0.3rem 1rem;
   border-radius: 20px;
@@ -143,20 +145,20 @@ title: Projects
 }
 
 .project-card h2 {
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 1rem;
   font-size: 1.5rem;
   padding-right: 80px;
 }
 
 .project-description {
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
 .project-specs {
-  background: #f8f9fa;
+  background: var(--page-bg);
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1.5rem;
@@ -166,7 +168,7 @@ title: Projects
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 0;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--border);
 }
 
 .spec:last-child {
@@ -174,12 +176,12 @@ title: Projects
 }
 
 .spec-label {
-  color: #999;
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
 .spec-value {
-  color: #333;
+  color: var(--text-primary);
   font-weight: 500;
   font-size: 0.9rem;
 }
@@ -189,7 +191,7 @@ title: Projects
 }
 
 .project-steps h3 {
-  color: #333;
+  color: var(--text-primary);
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
@@ -201,7 +203,7 @@ title: Projects
 
 .project-steps li {
   padding: 0.3rem 0;
-  color: #666;
+  color: var(--text-secondary);
   font-size: 0.95rem;
 }
 
@@ -213,7 +215,7 @@ title: Projects
 
 .project-button {
   padding: 0.6rem 1.2rem;
-  background: #667eea;
+  background: var(--accent);
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -224,21 +226,21 @@ title: Projects
 }
 
 .project-button:hover {
-  background: #5a67d8;
+  background: var(--accent-dark);
 }
 
 .project-button.secondary {
   background: transparent;
-  color: #667eea;
-  border: 1px solid #667eea;
+  color: var(--accent);
+  border: 1px solid var(--accent);
 }
 
 .project-button.secondary:hover {
-  background: #f8f9fa;
+  background: var(--page-bg);
 }
 
 .active {
-  color: #667eea;
+  color: var(--accent);
   font-weight: 600;
 }
 

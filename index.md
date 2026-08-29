@@ -79,12 +79,6 @@ hero_rotate: true
 </div>
 
 <style>
-.page-hero-title,
-.page-hero-subtitle,
-.page-hero-description {
-  color: var(--bright-gold) !important;
-}
-
 .home-page {
   display: flex;
   flex-direction: column;
